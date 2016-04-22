@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1343073199}
   Camera_follow_speed: 1
-  zoomSize: 5
+  zoomSize: 7
 --- !u!1 &1343073196
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,8 +342,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2048856150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1, y: 2.4, z: 0}
-  m_LocalScale: {x: 7.4613547, y: 7.4613547, z: 7.4613547}
+  m_LocalPosition: {x: 5.3, y: -0.8, z: 0}
+  m_LocalScale: {x: 14.609951, y: 14.609951, z: 14.609951}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
