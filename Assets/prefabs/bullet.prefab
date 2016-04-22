@@ -11,8 +11,7 @@ GameObject:
   - 198: {fileID: 19812796}
   - 199: {fileID: 19998424}
   - 50: {fileID: 5093172}
-  - 114: {fileID: 11491022}
-  - 114: {fileID: 11464120}
+  - 114: {fileID: 11423066}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -49,7 +48,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &11464120
+--- !u!114 &11423066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -57,22 +56,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 129870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab856911d91d08649ba0c48f0ddc51ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b7d6d9c6030faa469306770051c7706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BulletForce: 0.7
---- !u!114 &11491022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 080ddcc94655adb42943047efc0e4f0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 0}
+  bulletLifetime: 6
 --- !u!198 &19812796
 ParticleSystem:
   m_ObjectHideFlags: 1

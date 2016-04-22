@@ -197,6 +197,7 @@ GameObject:
   - 212: {fileID: 1343073198}
   - 114: {fileID: 1343073197}
   - 50: {fileID: 1343073200}
+  - 114: {fileID: 1343073201}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -276,6 +277,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1343073201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343073196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94ad63dd7857ac4795f64fc654e24b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 134204, guid: e9ea0d41eb433884a9f11dbd0b76fb7a, type: 2}
 --- !u!1 &2048856150
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,8 +342,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2048856150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.07, y: -0.77, z: 0}
-  m_LocalScale: {x: 2.4119835, y: 2.4119835, z: 2.4119835}
+  m_LocalPosition: {x: -3.1, y: 2.4, z: 0}
+  m_LocalScale: {x: 7.4613547, y: 7.4613547, z: 7.4613547}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
