@@ -10,24 +10,23 @@ public class PlayerMovementAst : MonoBehaviour {
 
     void Start ()
     {
-	 
-	}
+        myScriptsRigidbody2D = GetComponent<Rigidbody2D>();
+    }
 
     void FixedUpdate()
     {
 
         if (Input.GetKey(KeyCode.A))
         {
-            myScriptsRigidbody2D = GetComponent<Rigidbody2D>();
+            
             myScriptsRigidbody2D.angularVelocity = RotationSpeed;
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
-            myScriptsRigidbody2D = GetComponent<Rigidbody2D>();
+            
             myScriptsRigidbody2D.angularVelocity = -RotationSpeed;
         }
-
         else
         {
             myScriptsRigidbody2D.angularVelocity = 0f;
@@ -35,12 +34,14 @@ public class PlayerMovementAst : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.W))
         {
+            
             myScriptsRigidbody2D.AddForce(transform.up * ThrustForce);
             
         }
 
         if (Input.GetKey(KeyCode.S))
         {
+            
             myScriptsRigidbody2D.AddForce(transform.up * -ThrustForce);
 
         }
