@@ -5,6 +5,8 @@ public class BulletMovement : MonoBehaviour {
 
     public float BulletForce;
     public float bulletLifetime;
+    
+    
 
     private float life;
 
@@ -12,10 +14,10 @@ public class BulletMovement : MonoBehaviour {
 
     void Start()
     {
-
         life = bulletLifetime;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Rigidbody2D.AddForce(transform.up * BulletForce);
+        Debug.Log(Rigidbody2D);
     }
 
     void Update()
@@ -26,4 +28,6 @@ public class BulletMovement : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+  
+    
 }

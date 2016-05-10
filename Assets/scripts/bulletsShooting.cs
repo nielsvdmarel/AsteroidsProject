@@ -4,16 +4,18 @@ using System.Collections;
 public class bulletsShooting : MonoBehaviour {
 
     public GameObject BulletPrefab;
+    private Vector3 pos;
+    private Quaternion rot;
 
-    // Use this for initialization
     void Start()
     {
-        Debug.Log("hi");
+        rot = transform.rotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(BulletPrefab, transform.position, transform.rotation);
