@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7d6d9c6030faa469306770051c7706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletForce: 10
+  BulletForce: 30
   bulletLifetime: 2
 --- !u!114 &11454254
 MonoBehaviour:
