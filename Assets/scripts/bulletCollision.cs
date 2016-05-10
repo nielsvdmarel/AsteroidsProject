@@ -15,9 +15,9 @@ public class bulletCollision : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
         other.GetComponent<healthScript>().currentHealth -= damage;
-    }
+    }*/
 }

@@ -20,6 +20,10 @@ public class healthScript : MonoBehaviour {
             Destroy(gameObject);
         }
 	}
-    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(other.gameObject);
+        currentHealth -= other.GetComponent<bulletCollision>().damage;
+    }
 
 }
