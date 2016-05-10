@@ -22,8 +22,10 @@ public class healthScript : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "bullet") { 
         Destroy(other.gameObject);
         currentHealth -= other.GetComponent<bulletCollision>().damage;
+        }
     }
 
 }
