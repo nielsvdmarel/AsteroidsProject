@@ -7,7 +7,7 @@ public class waveScript : MonoBehaviour {
     public GameObject backColor;
     public int enemiesDied;
     public float[] waves;
-    public Color[] color;
+    //public Color[] color;
    
 
     private int wave;
@@ -18,19 +18,18 @@ public class waveScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        backColorRenderer = backColor.GetComponent<SpriteRenderer>();
-        backColorRenderer.color = new Color(255F, 40F, 40F, 255F);
-        Debug.Log(waves[2]);
+        //backColorRenderer = backColor.GetComponent<SpriteRenderer>();
+        //backColorRenderer.color = new Color(255F, 40F, 40F, 255F);
+        //Debug.Log(waves[2]);
         enemyCounter = 0;
         wave = 0;
-        
     }
 	
 	// Update is called once per frame
 	void Update () {
 	if (enemiesDied == waves[wave])
         {
-            Debug.Log("wave ends");
+            //Debug.Log("wave ends");
             enemyCounter = 0;
             enemiesDied = 0;
             wave++;
@@ -39,7 +38,7 @@ public class waveScript : MonoBehaviour {
 
     if (enemyCounter == waves[wave])
         {
-            Debug.Log("spawning ends");
+            //Debug.Log("spawning ends");
             CancelInvoke();             
         }
 
@@ -48,10 +47,8 @@ public class waveScript : MonoBehaviour {
             //
         }
    
-
         if (started == false)
-        {
-            
+        {         
             InvokeRepeating("spawn", 0.0f, 5.0f);
             started = true;
         }
