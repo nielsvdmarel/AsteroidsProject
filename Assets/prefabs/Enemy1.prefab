@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11494650}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,7 +34,7 @@ GameObject:
   - 212: {fileID: 21229566}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,11 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a45a6cb3a321449bf7b3ff97a3f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 5
   backSpeed: 2
   bounceDistance: 5
-  forward: 0
+  forward: 1
 --- !u!114 &11494650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   minHealth: 1
+  enemies: {fileID: 0}
   currentHealth: 0
 --- !u!212 &21229566
 SpriteRenderer:

@@ -19,12 +19,19 @@ public class EnemyMovement : MonoBehaviour {
     
     void Start ()
     {
+        int random = Random.Range(1, 4);
+        //random = 3;
+        if (random == 1) { transform.position = new Vector3(Random.Range(50F, -50F), 50, 0F); }
+        else if (random == 2) { transform.position = new Vector3(Random.Range(50F, 50F),-50, 0F); }
+        else if (random == 3) { transform.position = new Vector3(50, Random.Range(50F, -50F), 0F); }
+        else if (random == 4) { transform.position = new Vector3(-50, Random.Range(50F, -50F), 0F); }
 
-        
+
+
+
         motherboard = GameObject.Find("MoederBoord");
-        Debug.Log(motherboard.transform.position.x);
-        Debug.Log("test");
-        target = motherboard.transform;
+        //Debug.Log(Random.Range(-30F, 30F));
+        target = motherboard.transform; 
         forward = true;
         backSpeed = -backSpeed;
     }

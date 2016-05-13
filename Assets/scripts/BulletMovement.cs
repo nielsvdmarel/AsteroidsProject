@@ -17,7 +17,7 @@ public class BulletMovement : MonoBehaviour {
         life = bulletLifetime;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Rigidbody2D.AddForce(transform.up * BulletForce);
-        Debug.Log(Rigidbody2D);
+
     }
 
     void Update()

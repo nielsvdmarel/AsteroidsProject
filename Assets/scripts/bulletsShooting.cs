@@ -4,12 +4,12 @@ using System.Collections;
 public class bulletsShooting : MonoBehaviour {
 
     public GameObject BulletPrefab;
-    private Vector3 pos;
-    private Quaternion rot;
+    //private Vector3 pos;
+    //private Quaternion rot;
 
     void Start()
     {
-        rot = transform.rotation;
+        //rot = transform.rotation;
     }
 
     void Update()

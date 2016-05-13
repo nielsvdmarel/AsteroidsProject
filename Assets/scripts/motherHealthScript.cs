@@ -22,9 +22,18 @@ public class motherHealthScript : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        //other.GetComponent<EnemyMovement>.forward = false;
-        other.GetComponentInParent<EnemyMovement>().forward = false;
-        other.GetComponentInParent<EnemyMovement>().setrange();
-        currentHealth -= other.GetComponent<motherDamageScript>().Motherdamage;
+        Debug.Log("okeeee");
+        if (other.tag == "enemy")
+        {
+            
+            //other.GetComponent<EnemyMovement>.forward = false;
+            other.GetComponentInParent<EnemyMovement>().forward = false;
+            other.GetComponentInParent<EnemyMovement>().setrange();
+            currentHealth -= other.GetComponent<motherDamageScript>().Motherdamage;
+        }
+        if (other.tag == "bullet")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
