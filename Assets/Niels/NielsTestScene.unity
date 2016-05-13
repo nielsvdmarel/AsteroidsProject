@@ -96,6 +96,7 @@ GameObject:
   - 212: {fileID: 23841645}
   - 50: {fileID: 23841648}
   - 58: {fileID: 23841647}
+  - 95: {fileID: 23841649}
   m_Layer: 0
   m_Name: MoederBoord
   m_TagString: Target
@@ -129,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8c02565ae1439214aadf0fb6a66e9225, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89cd6f661bbc8bd41a176ee78041f711, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -141,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 23841644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.2, y: 3.4, z: 0}
-  m_LocalScale: {x: 13.0839615, y: 13.0839615, z: 13.0839615}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -158,7 +159,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.7168312
+  m_Radius: 4.9004726
 --- !u!50 &23841648
 Rigidbody2D:
   serializedVersion: 2
@@ -176,6 +177,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &23841649
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23841644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &65734914
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +776,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 559059375ff7d1045b2d27e2fc7bed94, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &433901688
@@ -1631,6 +1649,7 @@ GameObject:
   - 114: {fileID: 1105537821}
   - 50: {fileID: 1105537820}
   - 114: {fileID: 1105537819}
+  - 61: {fileID: 1105537824}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -1723,6 +1742,20 @@ Transform:
   - {fileID: 1480608301}
   m_Father: {fileID: 0}
   m_RootOrder: 43
+--- !u!61 &1105537824
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105537818}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 3.58, y: 5.76}
 --- !u!1 &1169522427
 GameObject:
   m_ObjectHideFlags: 0
