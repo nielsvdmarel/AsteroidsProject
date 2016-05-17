@@ -162,7 +162,7 @@ MonoBehaviour:
   speed: 5
   backSpeed: 2
   bounceDistance: 5
-  spawnDistance: 100
+  spawnDistance: 0
   forward: 1
 --- !u!212 &21219676
 SpriteRenderer:

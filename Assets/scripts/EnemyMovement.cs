@@ -20,18 +20,17 @@ public class EnemyMovement : MonoBehaviour {
     
     void Start ()
     {
+        if (spawnDistance == 0){spawnDistance = GameObject.Find("enemies").GetComponent<waveScript>().spawndistance;}
+
         float random = Random.Range(0, 100);
-        print(random);
+        //print(random);
+
         if (random < 25 && random > 0) { transform.position = new Vector2(Random.Range(spawnDistance, -spawnDistance), spawnDistance); }
         else if (random < 50 && random > 25) { transform.position = new Vector2(Random.Range(spawnDistance, -spawnDistance),-spawnDistance); }
         else if (random < 75 && random > 50) { transform.position = new Vector2(spawnDistance, Random.Range(spawnDistance, -spawnDistance)); }
         else if (random < 100 && random > 75) { transform.position = new Vector2(-spawnDistance, Random.Range(spawnDistance, -spawnDistance)); }
 
-
-
-
         motherboard = GameObject.Find("MoederBoord");
-        //Debug.Log(Random.Range(-30F, 30F));
         target = motherboard.transform; 
         forward = true;
         backSpeed = -backSpeed;
@@ -49,19 +48,14 @@ public class EnemyMovement : MonoBehaviour {
         if(range > rangeSet + bounceDistance){
             forward = true;
         }
-            
-
             if (forward == true)
             {
-               
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             }
             else
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, backSpeed * Time.deltaTime);
             }
-        
-
     }
 
     public void setrange()

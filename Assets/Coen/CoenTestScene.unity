@@ -5242,15 +5242,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesDied: 0
+  spawndistance: 50
+  waveStartDelay: 3
+  enemySpawnDelay:
+  - 3
+  - 8
   Enemies:
   - {fileID: 165230, guid: bf7218892c75b4b498194ab033c77079, type: 2}
   - {fileID: 105356, guid: f6a666f555f136245937ab350102ce6c, type: 2}
   - {fileID: 156778, guid: 5fd586c89ca862845984d8e241255957, type: 2}
-  waves: 0a000000040000000000000000000000000000000000000000000000000000000000000000000000
-  enemy1: 02000000000000000000000000000000000000000000000000000000000000000000000000000000
-  enemy2: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
-  enemy3: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
-  enemiesDied: 0
+  waves: 0100000003000000
+  enemy1: 0100000001000000
+  enemy2: 0000000001000000
+  enemy3: 0000000001000000
 --- !u!4 &798729299
 Transform:
   m_ObjectHideFlags: 0
@@ -5258,7 +5263,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 798729297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.878542, y: 10.156225, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13112,12 +13117,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesDied: 0
+  spawndistance: 0
+  waveStartDelay: 0
+  enemySpawnDelay: []
   Enemies: []
   waves: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   enemy1: 
   enemy2: 
   enemy3: 
-  enemiesDied: 0
 --- !u!1 &2075179704
 GameObject:
   m_ObjectHideFlags: 0

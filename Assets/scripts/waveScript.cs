@@ -3,17 +3,17 @@ using System.Collections;
 
 public class waveScript : MonoBehaviour {
 
+    public int enemiesDied;
+    public float spawndistance;
+    public float waveStartDelay;
+    public float[] enemySpawnDelay;
     public GameObject[] Enemies;
+    
     public int[] waves;
     public int[] enemy1;
     public int[] enemy2;
     public int[] enemy3;
     
-
-    //public Color[] color;
-    //public GameObject backColor;
-
-    public int enemiesDied;
     private int wave;
     private SpriteRenderer backColorRenderer;
     private float enemyCounter;
@@ -22,10 +22,8 @@ public class waveScript : MonoBehaviour {
 
 	
 	void Start () {
-        
         enemyCounter = 0;
         wave = 0;
-        
     }
 	
 	
@@ -52,7 +50,7 @@ public class waveScript : MonoBehaviour {
    
         if (started == false)
         {         
-            InvokeRepeating("spawn", 0.0f, 5.0f);
+            InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
             started = true;
         }
 	}
