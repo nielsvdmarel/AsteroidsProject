@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour {
     public float speed = 2f;
     public float backSpeed = 1f;
     public float bounceDistance;
+    public float spawnDistance;
 
     private GameObject motherboard;
     private float minDistance = 1f;
@@ -19,12 +20,12 @@ public class EnemyMovement : MonoBehaviour {
     
     void Start ()
     {
-        int random = Random.Range(1, 4);
-        //random = 3;
-        if (random == 1) { transform.position = new Vector3(Random.Range(50F, -50F), 50, 0F); }
-        else if (random == 2) { transform.position = new Vector3(Random.Range(50F, 50F),-50, 0F); }
-        else if (random == 3) { transform.position = new Vector3(50, Random.Range(50F, -50F), 0F); }
-        else if (random == 4) { transform.position = new Vector3(-50, Random.Range(50F, -50F), 0F); }
+        float random = Random.Range(0, 100);
+        print(random);
+        if (random < 25 && random > 0) { transform.position = new Vector2(Random.Range(spawnDistance, -spawnDistance), spawnDistance); }
+        else if (random < 50 && random > 25) { transform.position = new Vector2(Random.Range(spawnDistance, -spawnDistance),-spawnDistance); }
+        else if (random < 75 && random > 50) { transform.position = new Vector2(spawnDistance, Random.Range(spawnDistance, -spawnDistance)); }
+        else if (random < 100 && random > 75) { transform.position = new Vector2(-spawnDistance, Random.Range(spawnDistance, -spawnDistance)); }
 
 
 

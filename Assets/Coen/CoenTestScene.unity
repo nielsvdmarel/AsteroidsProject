@@ -5242,20 +5242,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 165230, guid: bf7218892c75b4b498194ab033c77079, type: 2}
-  backColor: {fileID: 0}
+  Enemies:
+  - {fileID: 165230, guid: bf7218892c75b4b498194ab033c77079, type: 2}
+  - {fileID: 105356, guid: f6a666f555f136245937ab350102ce6c, type: 2}
+  - {fileID: 156778, guid: 5fd586c89ca862845984d8e241255957, type: 2}
+  waves: 0a000000040000000000000000000000000000000000000000000000000000000000000000000000
+  enemy1: 02000000000000000000000000000000000000000000000000000000000000000000000000000000
+  enemy2: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  enemy3: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
   enemiesDied: 0
-  waves:
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
 --- !u!4 &798729299
 Transform:
   m_ObjectHideFlags: 0
@@ -13117,20 +13112,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 165230, guid: bf7218892c75b4b498194ab033c77079, type: 2}
-  backColor: {fileID: 2100694039}
+  Enemies: []
+  waves: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  enemy1: 
+  enemy2: 
+  enemy3: 
   enemiesDied: 0
-  waves:
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
 --- !u!1 &2075179704
 GameObject:
   m_ObjectHideFlags: 0

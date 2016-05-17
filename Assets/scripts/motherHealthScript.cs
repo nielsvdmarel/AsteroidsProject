@@ -22,7 +22,7 @@ public class motherHealthScript : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("okeeee");
+
         if (other.tag == "enemy")
         {
             
