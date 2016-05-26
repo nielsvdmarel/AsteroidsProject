@@ -2482,7 +2482,7 @@ Transform:
   m_LocalScale: {x: 28.887272, y: 64.30514, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &434764683
 GameObject:
   m_ObjectHideFlags: 0
@@ -6508,7 +6508,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1105537818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1, y: 1.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 1480608301}
@@ -6832,6 +6832,7 @@ GameObject:
   - 20: {fileID: 1194149487}
   - 124: {fileID: 1194149486}
   - 92: {fileID: 1194149485}
+  - 114: {fileID: 1194149484}
   m_Layer: 0
   m_Name: MinimapCamera
   m_TagString: Untagged
@@ -6839,6 +6840,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1194149484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194149483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a2927932bbcb6409e69d2ee38e336f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game2: {fileID: 1105537818}
 --- !u!92 &1194149485
 Behaviour:
   m_ObjectHideFlags: 0
@@ -6894,11 +6907,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1194149483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.6, y: 0, z: -207.5}
+  m_LocalPosition: {x: 0, y: 0, z: -207.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1203558083
 GameObject:
   m_ObjectHideFlags: 0
@@ -9057,14 +9070,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 165230, guid: bf7218892c75b4b498194ab033c77079, type: 2}
-  backColor: {fileID: 0}
   enemiesDied: 0
-  waves:
-  - 5
-  - 3
-  - 2
-  - 2
+  spawndistance: 0
+  waveStartDelay: 0
+  enemySpawnDelay: []
+  Enemies: []
+  waves: 05000000030000000200000002000000
+  enemy1: 
+  enemy2: 
+  enemy3: 
 --- !u!4 &1566350305
 Transform:
   m_ObjectHideFlags: 0
