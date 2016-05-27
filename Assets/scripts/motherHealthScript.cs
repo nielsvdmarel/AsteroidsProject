@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class motherHealthScript : MonoBehaviour {
+public class motherHealthScript : MonoBehaviour
+{
 
     public float maxHealth;
     public float minHealth;
@@ -9,15 +11,24 @@ public class motherHealthScript : MonoBehaviour {
     public float currentHealth;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         currentHealth = maxHealth;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
+
         if (currentHealth < minHealth)
         {
             Destroy(gameObject);
+
+
+
+            SceneManager.LoadScene("gameover");
+
+
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +36,7 @@ public class motherHealthScript : MonoBehaviour {
 
         if (other.tag == "enemy")
         {
-            
+
             //other.GetComponent<EnemyMovement>.forward = false;
             other.GetComponentInParent<EnemyMovement>().forward = false;
             other.GetComponentInParent<EnemyMovement>().setrange();
@@ -38,9 +49,9 @@ public class motherHealthScript : MonoBehaviour {
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             other.GetComponent<EdgeCollider2D>().isTrigger = false;
         }
     }
-  }
+}

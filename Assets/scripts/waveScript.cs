@@ -1,34 +1,49 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class waveScript : MonoBehaviour {
+public class waveScript : MonoBehaviour
+{
 
     public int enemiesDied;
     public float spawndistance;
     public float waveStartDelay;
     public float[] enemySpawnDelay;
     public GameObject[] Enemies;
-    
+
     public int[] waves;
     public int[] enemy1;
     public int[] enemy2;
     public int[] enemy3;
-    
+
     private int wave;
     private SpriteRenderer backColorRenderer;
     private float enemyCounter;
     private bool started;
-    
 
-	
-	void Start () {
+
+
+    void Start()
+    {
         enemyCounter = 0;
         wave = 0;
     }
-	
-	
-	void Update () {
-	if (enemiesDied == waves[wave])
+
+
+    void Update()
+    {
+
+
+        if (wave == waves.Length)
+        {
+            print("andere scene moet nu laden");
+            SceneManager.LoadScene("Win");
+            print("andere scene moet is geladen?");
+        }
+
+        print(wave);
+        print(waves.Length);
+        if (enemiesDied == waves[wave])
         {
             //Debug.Log("wave ends");
             enemyCounter = 0;
@@ -37,28 +52,25 @@ public class waveScript : MonoBehaviour {
             started = false;
         }
 
-    if (enemyCounter == waves[wave])
+        if (enemyCounter == waves[wave])
         {
             //Debug.Log("spawning ends");
-            CancelInvoke();             
+            CancelInvoke();
         }
 
-        if (wave > waves.Length)
-        {
-            //
-        }
-   
+
+
         if (started == false)
-        {         
+        {
             InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
             started = true;
         }
-	}
+    }
     private void spawn()
     {
         int total = enemy1[wave] + enemy2[wave] + enemy3[wave];
         float random = Random.Range(1, total);
-        
+
 
         float enemy1c = enemy1[wave];
         float enemy2c = enemy2[wave] + enemy1c;
@@ -82,11 +94,11 @@ public class waveScript : MonoBehaviour {
             Instantiate(Enemies[2]);
             enemy3[wave] -= 1;
         }
-        if(total == 0 && waves[wave] > 0)
+        if (total == 0 && waves[wave] > 0)
         {
             print("aangegeven enemies op");
             int randomenemy = Random.Range(1, 4);
-            if(randomenemy == 1) { Instantiate(Enemies[0]); }
+            if (randomenemy == 1) { Instantiate(Enemies[0]); }
             if (randomenemy == 2) { Instantiate(Enemies[1]); }
             if (randomenemy == 3) { Instantiate(Enemies[2]); }
         }

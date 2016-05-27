@@ -7,7 +7,7 @@ public class PlayerRespawnScript : MonoBehaviour
     public Vector2 spawn;
 
     private Rigidbody2D playerRigidbody;
-    
+
     void Start()
     {
         playerRigidbody = this.GetComponent<Rigidbody2D>();
@@ -15,6 +15,8 @@ public class PlayerRespawnScript : MonoBehaviour
         {
             spawn = GameObject.Find("MoederBoord").transform.position;
         }
+
+    }
 
     void Update()
     {
@@ -35,4 +37,8 @@ public class PlayerRespawnScript : MonoBehaviour
         }
 
     }
+
 }
+    
+
+
