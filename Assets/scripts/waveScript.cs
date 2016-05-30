@@ -11,7 +11,7 @@ public class waveScript : MonoBehaviour
     public float[] enemySpawnDelay;
     public GameObject[] Enemies;
 
-    public int[] waves;
+    public int waves;
     public int[] enemy1;
     public int[] enemy2;
     public int[] enemy3;
@@ -19,12 +19,14 @@ public class waveScript : MonoBehaviour
     private int wave;
     private SpriteRenderer backColorRenderer;
     private float enemyCounter;
-    private bool started;
+    private int total;
 
 
 
     void Start()
     {
+        InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
+        total = enemy1[wave] + enemy2[wave] + enemy3[wave];
         enemyCounter = 0;
         wave = 0;
     }
@@ -32,45 +34,31 @@ public class waveScript : MonoBehaviour
 
     void Update()
     {
-
-
-        if (wave == waves.Length)
+        if (enemyCounter == total)
         {
-            print("andere scene moet nu laden");
-            SceneManager.LoadScene("Win");
-            print("andere scene moet is geladen?");
-        }
-
-        print(wave);
-        print(waves.Length);
-        if (enemiesDied == waves[wave])
-        {
-            //Debug.Log("wave ends");
-            enemyCounter = 0;
-            enemiesDied = 0;
-            wave++;
-            started = false;
-        }
-
-        if (enemyCounter == waves[wave])
-        {
-            //Debug.Log("spawning ends");
             CancelInvoke();
-        }
-
-
-
-        if (started == false)
-        {
-            InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
-            started = true;
+            if (enemiesDied == total)
+            {
+            wave++;
+                if (wave == waves)
+                {
+                    print("andere scene moet nu laden");
+                    SceneManager.LoadScene("Win");
+                    print("andere scene moet is geladen?");
+                } else {
+                    total = enemy1[wave] + enemy2[wave] + enemy3[wave];
+                    InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
+                    enemyCounter = 0;
+                    enemiesDied = 0;
+                }
+            }
         }
     }
     private void spawn()
     {
-        int total = enemy1[wave] + enemy2[wave] + enemy3[wave];
-        float random = Random.Range(1, total);
-
+        int totalSpawn = enemy1[wave] + enemy2[wave] + enemy3[wave];
+        float random = Random.Range(1, totalSpawn);
+        
 
         float enemy1c = enemy1[wave];
         float enemy2c = enemy2[wave] + enemy1c;
@@ -94,14 +82,14 @@ public class waveScript : MonoBehaviour
             Instantiate(Enemies[2]);
             enemy3[wave] -= 1;
         }
-        if (total == 0 && waves[wave] > 0)
+        /*if (total == 0 && waves[wave] > 0)
         {
             print("aangegeven enemies op");
             int randomenemy = Random.Range(1, 4);
             if (randomenemy == 1) { Instantiate(Enemies[0]); }
             if (randomenemy == 2) { Instantiate(Enemies[1]); }
             if (randomenemy == 3) { Instantiate(Enemies[2]); }
-        }
+        }*/
 
     }
 

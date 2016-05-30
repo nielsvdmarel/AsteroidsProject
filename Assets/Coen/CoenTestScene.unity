@@ -5265,10 +5265,10 @@ MonoBehaviour:
   - {fileID: 165230, guid: bf7218892c75b4b498194ab033c77079, type: 2}
   - {fileID: 105356, guid: f6a666f555f136245937ab350102ce6c, type: 2}
   - {fileID: 156778, guid: 5fd586c89ca862845984d8e241255957, type: 2}
-  waves: 0500000003000000
-  enemy1: 0200000001000000
-  enemy2: 0200000001000000
-  enemy3: 0100000001000000
+  waves: 3
+  enemy1: 020000000100000001000000
+  enemy2: 010000000100000001000000
+  enemy3: 010000000100000001000000
 --- !u!4 &798729299
 Transform:
   m_ObjectHideFlags: 0
@@ -11217,7 +11217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fe34535134a6a44af1a1bc37957e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10000
   minHealth: 1
   currentHealth: 100
 --- !u!58 &1752585210
@@ -13181,7 +13181,7 @@ MonoBehaviour:
   waveStartDelay: 0
   enemySpawnDelay: []
   Enemies: []
-  waves: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  waves: 0
   enemy1: 
   enemy2: 
   enemy3: 
