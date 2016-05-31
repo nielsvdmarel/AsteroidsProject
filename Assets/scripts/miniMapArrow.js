@@ -3,6 +3,8 @@ var me : Transform;
 var meArrow : Texture2D;
 var minimap : Camera;
 var rotatingCube : Transform;
+
+
  
 function Start () {
  
