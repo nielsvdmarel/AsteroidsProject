@@ -10,6 +10,7 @@ public class waveScript : MonoBehaviour
     public float waveStartDelay;
     public float[] enemySpawnDelay;
     public GameObject[] Enemies;
+    public GameObject boss;
 
     public int waves;
     public int[] enemy1;
@@ -42,9 +43,9 @@ public class waveScript : MonoBehaviour
             wave++;
                 if (wave == waves)
                 {
-                    print("andere scene moet nu laden");
-                    SceneManager.LoadScene("Win");
-                    print("andere scene moet is geladen?");
+                    enemyCounter = -1;
+                    Instantiate(boss);
+                    
                 } else {
                     total = enemy1[wave] + enemy2[wave] + enemy3[wave];
                     InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));

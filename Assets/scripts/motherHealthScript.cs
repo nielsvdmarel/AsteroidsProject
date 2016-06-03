@@ -41,6 +41,10 @@ public class motherHealthScript : MonoBehaviour
             other.GetComponentInParent<EnemyMovement>().forward = false;
             other.GetComponentInParent<EnemyMovement>().setrange();
             currentHealth -= other.GetComponent<motherDamageScript>().Motherdamage;
+            if (other.GetComponentInParent<EnemyMovement>().drone)
+            {
+                Destroy(other.gameObject);
+            }
         }
         if (other.tag == "bullet")
         {

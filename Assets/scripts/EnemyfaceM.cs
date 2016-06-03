@@ -6,20 +6,31 @@ public class EnemyfaceM : MonoBehaviour {
    public float rotSpeed = 90f;
 
     Transform MoederBoord;
+    public GameObject target;
+
+    void Start ()
+    {
+        if (this.GetComponent<EnemyMovement>().drone)
+        {
+            target = GameObject.Find("Player");
+        }
+        else if (target == null)
+        {
+            target = GameObject.Find("MoederBoord");
+        }
+    }
 	
 	void Update ()
     {
-	    if(MoederBoord == null)
-        {
-            //find player ship
-           GameObject go = GameObject.Find("MoederBoord");
+       
+	   
+            GameObject go = target;
 
             if(go != null)
             {
                 MoederBoord = go.transform;
             }
-        }
-
+        
         if (MoederBoord == null)
             return;
 
