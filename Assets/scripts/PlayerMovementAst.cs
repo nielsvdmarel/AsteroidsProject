@@ -5,12 +5,14 @@ public class PlayerMovementAst : MonoBehaviour {
 
     public float RotationSpeed;
     public float ThrustForce;
+    public float defaultspeed;
     
     private Rigidbody2D myScriptsRigidbody2D;
 
     void Start ()
     {
         myScriptsRigidbody2D = GetComponent<Rigidbody2D>();
+        defaultspeed = ThrustForce;
     }
 
     void FixedUpdate()
