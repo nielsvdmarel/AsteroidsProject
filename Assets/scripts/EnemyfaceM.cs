@@ -4,19 +4,23 @@ using System.Collections;
 public class EnemyfaceM : MonoBehaviour {
 
    public float rotSpeed = 90f;
+    public bool hunter;
 
     Transform MoederBoord;
     public GameObject target;
 
     void Start ()
     {
-        if (this.GetComponent<EnemyMovement>().drone)
+        if (!hunter)
         {
-            target = GameObject.Find("Player");
-        }
-        else if (target == null)
-        {
-            target = GameObject.Find("MoederBoord");
+            if (this.GetComponent<EnemyMovement>().drone || hunter)
+            {
+                target = GameObject.Find("Player");
+            }
+            else if (target == null)
+            {
+                target = GameObject.Find("MoederBoord");
+            }
         }
     }
 	

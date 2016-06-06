@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11493378}
   - 114: {fileID: 11402450}
   - 114: {fileID: 11421374}
+  - 114: {fileID: 11475182}
   m_Layer: 0
   m_Name: Boss
   m_TagString: enemy
@@ -175,6 +176,7 @@ MonoBehaviour:
   bounceDistance: 5
   spawnDistance: 0
   drone: 0
+  stopMoving: 0
   motherboard: {fileID: 0}
   forward: 0
 --- !u!114 &11421374
@@ -207,6 +209,18 @@ MonoBehaviour:
   drone: {fileID: 194930, guid: a66cf4cea183bfe45b64fac96d368771, type: 2}
   dronehealthloss: 10
   currentHealth: 0
+--- !u!114 &11475182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6815ba6d28ce6304c90d02ec02ddd294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDistance: 0
 --- !u!114 &11493378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 300
+  hunter: 0
   target: {fileID: 0}
 --- !u!212 &21220046
 SpriteRenderer:

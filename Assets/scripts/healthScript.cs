@@ -28,7 +28,7 @@ public class healthScript : MonoBehaviour {
         {
             if (currentHealth < minHealth)
             {
-                enemies.GetComponent<waveScript>().enemiesDied += 1;
+                enemies.GetComponent<waveScript>().enemmiesDiedPlus();
                 Destroy(gameObject);
             }
         }
@@ -59,7 +59,7 @@ public class healthScript : MonoBehaviour {
     {
         if (other.tag == "bullet") {
             Destroy(other.gameObject);
-        currentHealth -= other.GetComponent<bulletCollision>().damage;
+            currentHealth -= other.GetComponent<bulletCollision>().damage;
         }
     }
     private void targetPlayer()

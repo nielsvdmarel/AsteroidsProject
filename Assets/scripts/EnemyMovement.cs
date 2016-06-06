@@ -9,7 +9,6 @@ public class EnemyMovement : MonoBehaviour {
     public float bounceDistance;
     public float spawnDistance;
     public bool drone;
-    public bool stopMoving;
 
     public GameObject motherboard;
     private float minDistance = 1f;
@@ -27,7 +26,7 @@ public class EnemyMovement : MonoBehaviour {
         
         if (!drone)
         {
-            RandomSpawn();
+            motherboard = GameObject.Find("MoederBoord");
         }
         else
         {
@@ -42,15 +41,12 @@ public class EnemyMovement : MonoBehaviour {
 	
 	void Update ()
     {
-        if (!stopMoving) {
-
-        
         range = Vector2.Distance(transform.position, target.position);
 
-            //Debug.Log(range);
-        if(range > rangeSet + bounceDistance){
+        if(range > rangeSet + bounceDistance)
             forward = true;
-        }
+
+
             if (forward == true)
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
@@ -59,7 +55,7 @@ public class EnemyMovement : MonoBehaviour {
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, backSpeed * Time.deltaTime);
             }
-        }
+        
     }
 
     public void setrange()
@@ -74,19 +70,6 @@ public class EnemyMovement : MonoBehaviour {
     {
         print(Dronenum);
         dronenum = Dronenum + 1;
-    }
-    private void RandomSpawn()
-    {
-        if (spawnDistance == 0){ spawnDistance = GameObject.Find("enemies").GetComponent<waveScript>().spawndistance; }
-
-            float random = Random.Range(0, 100);
-
-            if (random< 25 && random> 0) { transform.position = new Vector2(Random.Range(spawnDistance, -spawnDistance), spawnDistance); }
-            else if (random< 50 && random> 25) { transform.position = new Vector2(Random.Range(spawnDistance, -spawnDistance),-spawnDistance); }
-            else if (random< 75 && random> 50) { transform.position = new Vector2(spawnDistance, Random.Range(spawnDistance, -spawnDistance)); }
-            else if (random< 100 && random> 75) { transform.position = new Vector2(-spawnDistance, Random.Range(spawnDistance, -spawnDistance)); }
-
-             motherboard = GameObject.Find("MoederBoord");
     }
     private void Dronespawn()
     {

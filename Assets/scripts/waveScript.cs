@@ -5,7 +5,7 @@ using System.Collections;
 public class waveScript : MonoBehaviour
 {
 
-    public int enemiesDied;
+    
     public float spawndistance;
     public float waveStartDelay;
     public float[] enemySpawnDelay;
@@ -17,6 +17,7 @@ public class waveScript : MonoBehaviour
     public int[] enemy2;
     public int[] enemy3;
 
+    private int enemiesDied;
     private int wave;
     private SpriteRenderer backColorRenderer;
     private float enemyCounter;
@@ -83,15 +84,11 @@ public class waveScript : MonoBehaviour
             Instantiate(Enemies[2]);
             enemy3[wave] -= 1;
         }
-        /*if (total == 0 && waves[wave] > 0)
-        {
-            print("aangegeven enemies op");
-            int randomenemy = Random.Range(1, 4);
-            if (randomenemy == 1) { Instantiate(Enemies[0]); }
-            if (randomenemy == 2) { Instantiate(Enemies[1]); }
-            if (randomenemy == 3) { Instantiate(Enemies[2]); }
-        }*/
 
+    }
+    public void enemmiesDiedPlus()
+    {
+        enemiesDied++;
     }
 
 }
