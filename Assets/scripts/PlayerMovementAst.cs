@@ -28,13 +28,15 @@ public class PlayerMovementAst : MonoBehaviour {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
 
-            Rigidbody2D.angularVelocity = RotationSpeed;
+            //Rigidbody2D.angularVelocity = RotationSpeed;
+            Rigidbody2D.AddForce(transform.right * -ThrustForce);
         }
 
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
 
-            Rigidbody2D.angularVelocity = -RotationSpeed;
+            //Rigidbody2D.angularVelocity = -RotationSpeed;
+            Rigidbody2D.AddForce(transform.right * ThrustForce);
         }
         else
         {

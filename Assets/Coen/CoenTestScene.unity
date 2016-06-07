@@ -6149,7 +6149,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476518, guid: b0d32caa95288894ab4eaa7a74a05e93, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 21279412, guid: b0d32caa95288894ab4eaa7a74a05e93, type: 2}
       propertyPath: m_Sprite

@@ -16,7 +16,7 @@ public class bulletsShooting : MonoBehaviour {
     {
         
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             Instantiate(BulletPrefab, transform.position, transform.rotation);
         }
