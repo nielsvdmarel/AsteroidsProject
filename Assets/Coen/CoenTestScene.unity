@@ -3310,6 +3310,7 @@ GameObject:
   - 114: {fileID: 691195899}
   - 68: {fileID: 691195898}
   - 114: {fileID: 691195903}
+  - 114: {fileID: 691195904}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3443,6 +3444,7 @@ MonoBehaviour:
   RotationSpeed: 175
   ThrustForce: 10
   defaultspeed: 0
+  breakforce: 1.04
 --- !u!212 &691195902
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3485,6 +3487,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {x: 0, y: 0}
+--- !u!114 &691195904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691195896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4d71b4f7341ff4aa2c1398e714c77f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 900
 --- !u!1 &698870236
 GameObject:
   m_ObjectHideFlags: 0

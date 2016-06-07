@@ -6,45 +6,61 @@ public class PlayerMovementAst : MonoBehaviour {
     public float RotationSpeed;
     public float ThrustForce;
     public float defaultspeed;
+
+    public float breakforce;
     
-    private Rigidbody2D myScriptsRigidbody2D;
+    private Rigidbody2D Rigidbody2D;
 
     void Start ()
     {
-        myScriptsRigidbody2D = GetComponent<Rigidbody2D>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
         defaultspeed = ThrustForce;
+    }
+
+    void Update()
+    {
+        
     }
 
     void FixedUpdate()
     {
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            
-            myScriptsRigidbody2D.angularVelocity = RotationSpeed;
+
+            Rigidbody2D.angularVelocity = RotationSpeed;
         }
 
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            
-            myScriptsRigidbody2D.angularVelocity = -RotationSpeed;
+
+            Rigidbody2D.angularVelocity = -RotationSpeed;
         }
         else
         {
-            myScriptsRigidbody2D.angularVelocity = 0f;
+            Rigidbody2D.angularVelocity = 0f;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            
-            myScriptsRigidbody2D.AddForce(transform.up * ThrustForce);
+
+            Rigidbody2D.AddForce(transform.up * ThrustForce);
             
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            
-            myScriptsRigidbody2D.AddForce(transform.up * -ThrustForce);
+
+            Rigidbody2D.AddForce(transform.up * -ThrustForce);
+
+
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightControl))
+        {
+
+            Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x / breakforce, Rigidbody2D.velocity.y / breakforce);
+
 
         }
 
