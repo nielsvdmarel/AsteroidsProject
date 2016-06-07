@@ -3444,7 +3444,7 @@ MonoBehaviour:
   RotationSpeed: 175
   ThrustForce: 10
   defaultspeed: 0
-  breakforce: 1.04
+  breakforce: 1.1
 --- !u!212 &691195902
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3498,7 +3498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4d71b4f7341ff4aa2c1398e714c77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 900
+  rotSpeed: 160
 --- !u!1 &698870236
 GameObject:
   m_ObjectHideFlags: 0

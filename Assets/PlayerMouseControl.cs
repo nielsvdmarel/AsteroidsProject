@@ -6,6 +6,8 @@ public class PlayerMouseControl : MonoBehaviour {
     public float rotSpeed = 0.01f;
     private Vector2 oldMousePos;
 
+    private bool stopmove;
+
     // Use this for initialization
     void Start () {
         
@@ -16,8 +18,7 @@ public class PlayerMouseControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector2 mousePos = Input.mousePosition;
-        if (oldMousePos != mousePos)
-        {
+        //if (oldMousePos != mousePos){
             Vector2 dir = Camera.main.ScreenToWorldPoint(mousePos) - transform.position;
             dir.Normalize();
 
@@ -28,6 +29,7 @@ public class PlayerMouseControl : MonoBehaviour {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, rotSpeed * Time.deltaTime);
 
             oldMousePos = mousePos;
-        }
+            
+        //}
     }
 }
