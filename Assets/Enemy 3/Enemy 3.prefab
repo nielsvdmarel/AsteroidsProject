@@ -320,6 +320,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &186330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429254}
+  - 122: {fileID: 12227074}
+  - 114: {fileID: 11497208}
+  m_Layer: 0
+  m_Name: Halorood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &194838
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +431,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 417936}
   m_RootOrder: 0
+--- !u!4 &429254
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186330}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000016292068}
+  m_LocalPosition: {x: 1.3, y: 1, z: 35.4}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_Children: []
+  m_Father: {fileID: 448376}
+  m_RootOrder: 10
 --- !u!4 &431892
 Transform:
   m_ObjectHideFlags: 1
@@ -485,7 +514,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149264}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: -0.00000016292068}
-  m_LocalPosition: {x: -102.73405, y: 117.78922, z: 0}
+  m_LocalPosition: {x: -139.8353, y: -13.308216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454966}
@@ -498,6 +527,7 @@ Transform:
   - {fileID: 466030}
   - {fileID: 440164}
   - {fileID: 454714}
+  - {fileID: 429254}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &449218
@@ -784,6 +814,28 @@ MonoBehaviour:
   hunter: 0
   extraTurn: 1
   target: {fileID: 0}
+--- !u!114 &11497208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4218b9916f95645ba221d8de7db4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!122 &12227074
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186330}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 22
 --- !u!198 &19842860
 ParticleSystem:
   m_ObjectHideFlags: 1

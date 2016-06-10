@@ -16,6 +16,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &143498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 499122}
+  - 122: {fileID: 12250606}
+  - 114: {fileID: 11462288}
+  - 114: {fileID: 11450732}
+  m_Layer: 0
+  m_Name: Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &150116
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +195,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &407146
 Transform:
   m_ObjectHideFlags: 1
@@ -185,9 +203,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.092533, y: -36.960197, z: 0}
+  m_LocalPosition: {x: -29.38001, y: -47.63771, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 499122}
   - {fileID: 447092}
   - {fileID: 484422}
   - {fileID: 406384}
@@ -195,8 +214,8 @@ Transform:
   - {fileID: 425840}
   - {fileID: 461956}
   - {fileID: 487264}
-  - {fileID: 446220}
   - {fileID: 429120}
+  - {fileID: 446220}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &425840
@@ -210,7 +229,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &429120
 Transform:
   m_ObjectHideFlags: 1
@@ -234,7 +253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!4 &447092
 Transform:
   m_ObjectHideFlags: 1
@@ -246,7 +265,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &461956
 Transform:
   m_ObjectHideFlags: 1
@@ -258,7 +277,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &484422
 Transform:
   m_ObjectHideFlags: 1
@@ -270,7 +289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &487264
 Transform:
   m_ObjectHideFlags: 1
@@ -282,7 +301,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &496654
 Transform:
   m_ObjectHideFlags: 1
@@ -294,7 +313,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407146}
-  m_RootOrder: 3
+  m_RootOrder: 4
+--- !u!4 &499122
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26, y: 0.05, z: 35.4}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_Children: []
+  m_Father: {fileID: 407146}
+  m_RootOrder: 0
 --- !u!50 &5017080
 Rigidbody2D:
   serializedVersion: 2
@@ -378,6 +409,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11450732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4218b9916f95645ba221d8de7db4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11456916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,6 +432,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDistance: 0
+--- !u!114 &11462288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4218b9916f95645ba221d8de7db4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11490702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -437,6 +490,17 @@ MonoBehaviour:
   hunter: 1
   extraTurn: 0
   target: {fileID: 0}
+--- !u!122 &12250606
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143498}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4282515200
+  m_Size: 22
 --- !u!212 &21218868
 SpriteRenderer:
   m_ObjectHideFlags: 1
