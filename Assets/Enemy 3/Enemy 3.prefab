@@ -169,11 +169,11 @@ GameObject:
   - 114: {fileID: 11477904}
   - 114: {fileID: 11482638}
   - 114: {fileID: 11477238}
-  - 60: {fileID: 6042886}
   - 114: {fileID: 11464562}
+  - 60: {fileID: 6017646}
   m_Layer: 0
   m_Name: Enemy 3
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,7 +485,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149264}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: -0.00000016292068}
-  m_LocalPosition: {x: -3.4681325, y: -2.1568322, z: 0}
+  m_LocalPosition: {x: -102.73405, y: 117.78922, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454966}
@@ -531,8 +531,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173588}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: -0.00000016292068}
-  m_LocalPosition: {x: 1.85, y: -1.53, z: -31}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0.4}
+  m_LocalPosition: {x: 1.96, y: -3.36, z: -31}
+  m_LocalScale: {x: 8.980224, y: 8.980224, z: 2.3947263}
   m_Children: []
   m_Father: {fileID: 448376}
   m_RootOrder: 9
@@ -636,7 +636,7 @@ Transform:
   - {fileID: 461586}
   m_Father: {fileID: 448376}
   m_RootOrder: 1
---- !u!60 &6042886
+--- !u!60 &6017646
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -650,34 +650,26 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -5.7020087, y: 1.0478599}
-      - {x: -4.601751, y: 2.1783986}
-      - {x: -4.3252845, y: 2.0703611}
-      - {x: -3.9741693, y: 2.0411918}
-      - {x: -3.179756, y: 2.8851762}
-      - {x: -2.3703613, y: 3.636429}
-      - {x: -1.2478399, y: 3.6679316}
-      - {x: 0.017194198, y: 3.4345074}
-      - {x: 3.647813, y: 3.4126747}
-      - {x: 4.942887, y: 3.610648}
-      - {x: 6.0169244, y: 3.6291285}
-      - {x: 7.4162135, y: 2.241056}
-      - {x: 7.7386007, y: 1.9978193}
-      - {x: 8.277921, y: 2.1701334}
-      - {x: 9.344999, y: 1.0329921}
-      - {x: 7.5496416, y: -0.746515}
-      - {x: 6.410157, y: -1.8090079}
-      - {x: 6.189684, y: -2.0647073}
-      - {x: 4.784596, y: -3.4814641}
-      - {x: 3.5795884, y: -4.40714}
-      - {x: 2.6317205, y: -5.7011533}
-      - {x: 1.7600175, y: -7.0644927}
-      - {x: 0.2859176, y: -4.8597116}
-      - {x: -0.14229724, y: -4.311277}
-      - {x: -0.6819146, y: -3.8069172}
-      - {x: -1.167058, y: -3.4936042}
-      - {x: -2.0986357, y: -2.56566}
-      - {x: -3.5194857, y: -1.0585873}
+    - - {x: -4.5799403, y: 2.1005263}
+      - {x: -4.0302577, y: 2.1280608}
+      - {x: -2.3932102, y: 3.5074623}
+      - {x: -1.342818, y: 3.668923}
+      - {x: -2.2449944, y: 2.0403678}
+      - {x: -0.088255815, y: 3.1352997}
+      - {x: 3.6278162, y: 3.230109}
+      - {x: 5.020868, y: 3.7045271}
+      - {x: 6.2268, y: 3.6417902}
+      - {x: 7.408829, y: 2.1080298}
+      - {x: 8.143586, y: 2.1467335}
+      - {x: 9.3660965, y: 1.2249725}
+      - {x: 6.336105, y: -1.8647481}
+      - {x: 4.9164114, y: -3.5716188}
+      - {x: 2.7358608, y: -5.7821436}
+      - {x: 2.1305444, y: -6.481972}
+      - {x: 1.8071419, y: -6.989907}
+      - {x: -1.0109721, y: -3.3791807}
+      - {x: -3.3208318, y: -1.1874303}
+      - {x: -5.870544, y: 1.2340488}
 --- !u!95 &9533906
 Animator:
   serializedVersion: 3
@@ -772,7 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   backSpeed: 2
-  bounceDistance: 0
+  bounceDistance: 5
   spawnDistance: 0
   drone: 0
   motherboard: {fileID: 0}
@@ -2598,7 +2590,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 70
-  m_Sprite: {fileID: 21300000, guid: 3ec720b5963c0794d8d4399c5eb852ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b049486d6e90876468e9ddcd9435213d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
