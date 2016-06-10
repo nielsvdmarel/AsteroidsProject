@@ -89,9 +89,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 407146}
   - 95: {fileID: 9507498}
+  - 50: {fileID: 5017080}
+  - 60: {fileID: 6023136}
+  - 114: {fileID: 11456916}
+  - 114: {fileID: 11494260}
+  - 114: {fileID: 11495612}
+  - 114: {fileID: 11490702}
   m_Layer: 0
   m_Name: Hunter
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +185,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -39.092533, y: -36.960197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 447092}
@@ -289,6 +295,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 407146}
   m_RootOrder: 3
+--- !u!50 &5017080
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170728}
+  m_UseAutoMass: 0
+  m_Mass: 50
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &6023136
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -1.7191048, y: 0.2856598}
+      - {x: -1.2573586, y: 0.8610344}
+      - {x: -0.96167374, y: 2.2822342}
+      - {x: -0.6891861, y: 3.9500961}
+      - {x: 0.6497612, y: 4.10878}
+      - {x: 0.5929985, y: 2.5730095}
+      - {x: 1.090435, y: 2.3359718}
+      - {x: 1.1563187, y: 1.236866}
+      - {x: 1.664566, y: 0.48983383}
+      - {x: 2.533165, y: 0.16099548}
+      - {x: 4.3082047, y: -0.55042267}
+      - {x: 4.9137115, y: 0.090034485}
+      - {x: 4.901615, y: 1.2466431}
+      - {x: 4.516712, y: 3.4800568}
+      - {x: 3.7960205, y: 5.2864666}
+      - {x: 4.919487, y: 4.6288757}
+      - {x: 5.9156227, y: 3.6753578}
+      - {x: 7.720209, y: -0.087760925}
+      - {x: 6.380268, y: -2.2107925}
+      - {x: 4.765358, y: -1.8214302}
+      - {x: 2.450344, y: -1.6868286}
+      - {x: 1.7966919, y: -2.4515953}
+      - {x: 0.70301056, y: -2.4969254}
+      - {x: -0.8682747, y: -2.4518814}
+      - {x: -2.1012802, y: -2.4628258}
+      - {x: -3.571766, y: -1.6772041}
+      - {x: -6.6648636, y: -2.3261642}
+      - {x: -7.8129272, y: -0.1043396}
+      - {x: -6.002571, y: 3.4941711}
+      - {x: -5.1668243, y: 4.5100784}
+      - {x: -3.8146744, y: 5.2209244}
+      - {x: -4.908676, y: 2.2144966}
+      - {x: -4.939457, y: 0.04423523}
+      - {x: -2.6559982, y: -0.23130417}
+      - {x: -2.3134308, y: 0.30901718}
 --- !u!95 &9507498
 Animator:
   serializedVersion: 3
@@ -301,11 +373,70 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f699a76e1167cb34593424045cd2a674, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11456916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6815ba6d28ce6304c90d02ec02ddd294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDistance: 0
+--- !u!114 &11490702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf984f4a50b67b4fb193e63a1f187f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  minHealth: 1
+  boss: 0
+  enemies: {fileID: 0}
+  drone: {fileID: 0}
+  dronehealthloss: 0
+  currentHealth: 0
+--- !u!114 &11494260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c7b9e013acfe94586155febdaedda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startmoving: 5
+  moveAgain: 5
+  speed: 100
+--- !u!114 &11495612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3f4634d73116e4a8e3932caed2d688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 90
+  hunter: 1
+  extraTurn: 0
+  target: {fileID: 0}
 --- !u!212 &21218868
 SpriteRenderer:
   m_ObjectHideFlags: 1
