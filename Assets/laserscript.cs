@@ -6,11 +6,11 @@ public class laserscript : MonoBehaviour {
     public GameObject laser;
         private GameObject player = GameObject.Find("Player");
 
-    private float staticLaserLength;
+    private int staticLaserLength;
 
     void Start () {
 
-         float laserlengt = GameObject.Find("muzzlepoint").GetComponent<laserShooting>().laserlengtget();
+         int laserlengt = GameObject.Find("muzzlepoint").GetComponent<laserShooting>().laserlengtget();
         Transform playerT = GameObject.Find("Player").transform;
         Quaternion playerRotation = GameObject.Find("Player").transform.rotation;
 
@@ -23,13 +23,25 @@ public class laserscript : MonoBehaviour {
         this.transform.position = new Vector2(playerT.position.x, playerT.position.y + 2 * staticLaserLength);
         GameObject.Find("Player").transform.rotation = playerRotation;
         //this.transform.position = new Vector2(playerT.position.x , playerT.position.y);
-        if(laserlengt < 20)
+        if(laserlengt < 50)
         {
-            GameObject.Find("muzzlepoint").GetComponent<laserShooting>().instantiateLaser();
+            //GameObject.Find("muzzlepoint").GetComponent<laserShooting>().instantiateLaser();
         }
     }
 	
 	void Update () {
+        
+    }
+
+    public int getStaticLaser()
+    {
+        return staticLaserLength;
+    }
+
+    public void destroyLaser()
+    {
+        
+            Destroy(gameObject);
         
     }
 }

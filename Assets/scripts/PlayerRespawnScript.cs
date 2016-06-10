@@ -36,7 +36,7 @@ public class PlayerRespawnScript : MonoBehaviour
                 this.GetComponent<EdgeCollider2D>().isTrigger = true;
             }
             playerRigidbody.velocity = Vector2.zero;
-            print("collision found");
+            //print("collision found");
             this.transform.position = spawn;
         }
 

@@ -61,6 +61,10 @@ public class healthScript : MonoBehaviour {
             Destroy(other.gameObject);
             currentHealth -= other.GetComponent<bulletCollision>().damage;
         }
+        if (other.tag == "laser")
+        {
+            Destroy(gameObject);
+        }
     }
     private void targetPlayer()
     {
