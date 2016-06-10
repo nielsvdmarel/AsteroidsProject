@@ -33,7 +33,7 @@ public class PlayerRespawnScript : MonoBehaviour
         {
             if (spawn.x == GameObject.Find("MoederBoord").transform.position.x && spawn.y == GameObject.Find("MoederBoord").transform.position.y)
             {
-                this.GetComponent<PolygonCollider2D>().isTrigger = true;
+                this.GetComponent<Collider2D>().isTrigger = true;
             }
             playerRigidbody.velocity = Vector2.zero;
             //print("collision found");

@@ -30,7 +30,7 @@ public class waveScript : MonoBehaviour
     void Start()
     {
         InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
-        total = enemy1[wave] + enemy2[wave] + enemy3[wave];
+        total = enemy1[wave] + enemy2[wave] + enemy3[wave] + hunter[wave];
         enemyCounter = 0;
         wave = 0;
     }

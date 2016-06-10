@@ -55,7 +55,7 @@ public class motherHealthScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PolygonCollider2D>().isTrigger = false;
+            other.GetComponent<Collider2D>().isTrigger = false;
         }
     }
 }

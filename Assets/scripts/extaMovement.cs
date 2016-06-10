@@ -24,14 +24,20 @@ public class extaMovement : MonoBehaviour {
 	
 	void Update () {
         this.GetComponent<EnemyfaceM>().target = player;
-        transform.position = Vector2.MoveTowards(transform.position, targetSet, speed * Time.deltaTime);
+        if (!player.GetComponent<Collider2D>().isTrigger)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, targetSet, speed * Time.deltaTime);
+        }
     }
 
     private void setNewTarget()
     {
-        X = targetGet.position.x;
-        Y = targetGet.position.y;
-        targetSet = new Vector2(X, Y);
+        if (!player.GetComponent<Collider2D>().isTrigger)
+        {
+            X = targetGet.position.x;
+            Y = targetGet.position.y;
+            targetSet = new Vector2(X, Y);
+        }
     }
     private void test()
     {
