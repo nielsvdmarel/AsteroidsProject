@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Niels/gameover.unity
   - enabled: 1
     path: Assets/Niels/Win.unity
+  - enabled: 1
+    path: Assets/Niels/movetut.unity

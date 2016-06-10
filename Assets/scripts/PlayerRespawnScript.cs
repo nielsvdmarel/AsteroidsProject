@@ -10,6 +10,10 @@ public class PlayerRespawnScript : MonoBehaviour
 
     void Start()
     {
+
+
+
+
         playerRigidbody = this.GetComponent<Rigidbody2D>();
         if (spawn.x == 0 && spawn.y == 0)
         {
