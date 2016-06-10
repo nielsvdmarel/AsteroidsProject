@@ -17,8 +17,8 @@ public class laserShooting : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            Instantiate(headLaser);
-            laserCounter++;
+
+            instantiateLaser();
         }
 
     }
@@ -26,5 +26,10 @@ public class laserShooting : MonoBehaviour {
     public int laserlengtget()
     {
         return laserCounter;
+    }
+    public void instantiateLaser()
+    {
+        Instantiate(headLaser);
+        laserCounter++;
     }
 }

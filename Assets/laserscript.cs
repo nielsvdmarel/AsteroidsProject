@@ -4,20 +4,32 @@ using System.Collections;
 public class laserscript : MonoBehaviour {
 
     public GameObject laser;
+        private GameObject player = GameObject.Find("Player");
 
-	// Use this for initialization
-	void Start () {
+    private float staticLaserLength;
 
+    void Start () {
 
+         float laserlengt = GameObject.Find("muzzlepoint").GetComponent<laserShooting>().laserlengtget();
+        Transform playerT = GameObject.Find("Player").transform;
+        Quaternion playerRotation = GameObject.Find("Player").transform.rotation;
 
-        GameObject player = GameObject.Find("Player");
-        this.transform.parent = player.transform;
-        this.transform.position = new Vector2(0,0);
+        staticLaserLength = laserlengt;
 
+        this.transform.parent = GameObject.Find("Player").transform;
+        GameObject.Find("Player").transform.rotation = new Quaternion(0, 0, 0, 0);
+        this.transform.rotation = new Quaternion(playerT.rotation.x, playerT.rotation.y, playerT.rotation.z, playerT.rotation.w);
+        this.transform.position = new Vector2(playerT.position.x, playerT.position.y);
+        this.transform.position = new Vector2(playerT.position.x, playerT.position.y + 2 * staticLaserLength);
+        GameObject.Find("Player").transform.rotation = playerRotation;
+        //this.transform.position = new Vector2(playerT.position.x , playerT.position.y);
+        if(laserlengt < 20)
+        {
+            GameObject.Find("muzzlepoint").GetComponent<laserShooting>().instantiateLaser();
+        }
     }
 	
-	// Update is called once per frame
 	void Update () {
-	
-	}
+        
+    }
 }

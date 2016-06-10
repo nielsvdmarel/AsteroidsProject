@@ -4106,7 +4106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawndistance: 50
+  spawndistance: 150
   waveStartDelay: 3
   enemySpawnDelay:
   - 2
@@ -6831,7 +6831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec502c81ca23c5e4880c7fcc3d3e3767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headLaser: {fileID: 0}
+  headLaser: {fileID: 115154, guid: 19540429c9a9e484badf5859cc6b2d0d, type: 2}
 --- !u!1 &1329665132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7049,7 +7049,7 @@ MonoBehaviour:
   RotationSpeed: 175
   ThrustForce: 10
   defaultspeed: 0
-  breakforce: 1.1
+  breakforce: 1.07
 --- !u!212 &1335414661
 SpriteRenderer:
   m_ObjectHideFlags: 0
