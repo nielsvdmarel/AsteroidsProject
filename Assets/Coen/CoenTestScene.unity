@@ -4112,7 +4112,7 @@ MonoBehaviour:
   - 2
   - 2
   Enemies:
-  - {fileID: 0}
+  - {fileID: 149264, guid: cfb6bf90fa0a7e54cb60096349cfa733, type: 2}
   - {fileID: 105356, guid: f6a666f555f136245937ab350102ce6c, type: 2}
   - {fileID: 156778, guid: 5fd586c89ca862845984d8e241255957, type: 2}
   boss: {fileID: 139534, guid: 5fd30857098c9ac4e88d10c03b3fa803, type: 2}

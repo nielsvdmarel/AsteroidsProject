@@ -10,12 +10,14 @@ public class waveScript : MonoBehaviour
     public float waveStartDelay;
     public float[] enemySpawnDelay;
     public GameObject[] Enemies;
+    public GameObject hunterObject;
     public GameObject boss;
 
     public int waves;
     public int[] enemy1;
     public int[] enemy2;
     public int[] enemy3;
+    public int[] hunter;
 
     private int enemiesDied;
     private int wave;
@@ -58,13 +60,14 @@ public class waveScript : MonoBehaviour
     }
     private void spawn()
     {
-        int totalSpawn = enemy1[wave] + enemy2[wave] + enemy3[wave];
+        int totalSpawn = enemy1[wave] + enemy2[wave] + enemy3[wave] + hunter[wave];
         float random = Random.Range(1, totalSpawn);
         
 
         float enemy1c = enemy1[wave];
         float enemy2c = enemy2[wave] + enemy1c;
         float enemy3c = enemy3[wave] + enemy2c;
+        float hunterc = hunter[wave] + enemy2c;
 
         if (random < enemy1c + 1)
         {
@@ -83,6 +86,12 @@ public class waveScript : MonoBehaviour
             enemyCounter++;
             Instantiate(Enemies[2]);
             enemy3[wave] -= 1;
+        }
+        if (random < hunterc + 1 && random > enemy3c)
+        {
+            enemyCounter++;
+            Instantiate(hunterObject);
+            hunter[wave] -= 1;
         }
 
     }
