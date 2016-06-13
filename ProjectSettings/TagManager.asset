@@ -9,6 +9,7 @@ TagManager:
   - bullet
   - enemy
   - laser
+  - border
   layers:
   - Default
   - TransparentFX

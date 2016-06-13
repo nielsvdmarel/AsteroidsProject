@@ -9,11 +9,22 @@ public class waveScript : MonoBehaviour
     public float spawndistance;
     public float waveStartDelay;
     public float[] enemySpawnDelay;
+
+    public int waves;
+
+    public GameObject[] pickups;
+
+    public float[] speed;
+    public float[] shield;
+    public float[] health;
+    public float[] laser;
+
     public GameObject[] Enemies;
     public GameObject hunterObject;
     public GameObject boss;
+    
 
-    public int waves;
+    
     public int[] enemy1;
     public int[] enemy2;
     public int[] enemy3;
@@ -38,6 +49,7 @@ public class waveScript : MonoBehaviour
 
     void Update()
     {
+        pickUps();
         if (enemyCounter == total)
         {
             CancelInvoke();
@@ -50,8 +62,14 @@ public class waveScript : MonoBehaviour
                     Instantiate(boss);
                     
                 } else {
+                    GameObject[] allPickUps = GameObject.FindGameObjectsWithTag("pickup laserbeam");
+                    for(int i = 0; i < allPickUps.Length; i++)
+                    {
+                        Destroy(allPickUps[i]);
+                    }
                     total = enemy1[wave] + enemy2[wave] + enemy3[wave];
                     InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
+                    pickUps();
                     enemyCounter = 0;
                     enemiesDied = 0;
                 }
@@ -94,6 +112,16 @@ public class waveScript : MonoBehaviour
             hunter[wave] -= 1;
         }
 
+    }
+    private void pickUps()
+    {
+        int total = speed.Length + health.Length + laser.Length + shield.Length;
+        
+            if(speed[wave] > 0) { speed[wave] -= 1; Instantiate(pickups[3]); }
+            if (health[wave] > 0) { health[wave] -= 1; Instantiate(pickups[0]); }
+            if (laser[wave] > 0) { laser[wave] -= 1; Instantiate(pickups[1]); }
+            if (shield[wave] > 0) { shield[wave] -= 1; Instantiate(pickups[2]); }
+        
     }
     public void enemmiesDiedPlus()
     {

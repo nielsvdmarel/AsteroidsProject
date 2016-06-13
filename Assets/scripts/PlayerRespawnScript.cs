@@ -8,6 +8,8 @@ public class PlayerRespawnScript : MonoBehaviour
 
     private Rigidbody2D playerRigidbody;
 
+    public bool shield;
+
     void Start()
     {
 
@@ -18,7 +20,9 @@ public class PlayerRespawnScript : MonoBehaviour
         if (spawn.x == 0 && spawn.y == 0)
         {
             spawn = GameObject.Find("MoederBoord").transform.position;
+            this.GetComponent<Collider2D>().isTrigger = true;
         }
+        this.transform.position = spawn;
 
     }
 
@@ -31,13 +35,19 @@ public class PlayerRespawnScript : MonoBehaviour
     {
         if (other.tag == "enemy")
         {
-            if (spawn.x == GameObject.Find("MoederBoord").transform.position.x && spawn.y == GameObject.Find("MoederBoord").transform.position.y)
-            {
-                this.GetComponent<Collider2D>().isTrigger = true;
+            if (!shield) {
+                if (spawn.x == GameObject.Find("MoederBoord").transform.position.x && spawn.y == GameObject.Find("MoederBoord").transform.position.y)
+                {
+                    this.GetComponent<Collider2D>().isTrigger = true;
+                }
+                playerRigidbody.velocity = Vector2.zero;
+                //print("collision found");
+                this.transform.position = spawn;
             }
-            playerRigidbody.velocity = Vector2.zero;
-            //print("collision found");
-            this.transform.position = spawn;
+            else
+            {
+                shield = false;
+            }
         }
 
     }

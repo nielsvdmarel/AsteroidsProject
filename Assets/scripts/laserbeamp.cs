@@ -11,6 +11,7 @@ public class laserbeamp : MonoBehaviour
         if (other.tag == "Player")
         {
             Destroy(gameObject);
+            GameObject.Find("muzzlepoint").GetComponent<laserShooting>().laserStart();
         }
 
     }
