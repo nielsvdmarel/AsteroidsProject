@@ -31,6 +31,8 @@ public class waveScript : MonoBehaviour
     public int[] enemy3;
     public int[] hunter;
 
+    public bool playercanmove = false;
+
     private int enemiesDied;
     private int wave;
     private SpriteRenderer backColorRenderer;
@@ -151,7 +153,7 @@ public class waveScript : MonoBehaviour
 
         if (timeBeforeWave == 0)
         {
-            
+            playercanmove = true;
             wavetimer.text = "";
             
         }

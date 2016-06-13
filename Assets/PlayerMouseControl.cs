@@ -17,8 +17,10 @@ public class PlayerMouseControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector2 mousePos = Input.mousePosition;
-        //if (oldMousePos != mousePos){
+        if (GameObject.Find("enemies").GetComponent<waveScript>().playercanmove)
+        {
+            Vector2 mousePos = Input.mousePosition;
+       
             Vector2 dir = Camera.main.ScreenToWorldPoint(mousePos) - transform.position;
             dir.Normalize();
 
@@ -30,6 +32,6 @@ public class PlayerMouseControl : MonoBehaviour {
 
             oldMousePos = mousePos;
             
-        //}
+        }
     }
 }
