@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 
 public class waveScript : MonoBehaviour
@@ -35,20 +36,28 @@ public class waveScript : MonoBehaviour
     private SpriteRenderer backColorRenderer;
     private float enemyCounter;
     private int total;
+    private float timeBeforeWave;
+    private Text wavetimer;
 
 
 
     void Start()
     {
+        wavetimer = GameObject.Find("waveTimer").GetComponent<Text>();
+        timeBeforeWave = waveStartDelay;
+
         InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
         total = enemy1[wave] + enemy2[wave] + enemy3[wave] + hunter[wave];
         enemyCounter = 0;
         wave = 0;
+        StartCoroutine(timerfunction());
     }
 
 
     void Update()
     {
+        
+
         pickUps();
         if (enemyCounter == total)
         {
@@ -67,12 +76,15 @@ public class waveScript : MonoBehaviour
                     {
                         Destroy(allPickUps[i]);
                     }
+                    timeBeforeWave = waveStartDelay;
+                    StartCoroutine(timerfunction());
                     total = enemy1[wave] + enemy2[wave] + enemy3[wave];
                     InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
                     pickUps();
                     enemyCounter = 0;
                     enemiesDied = 0;
                 }
+
             }
         }
     }
@@ -127,5 +139,23 @@ public class waveScript : MonoBehaviour
     {
         enemiesDied++;
     }
+
+    IEnumerator timerfunction()
+    {
+        while (timeBeforeWave > 0)
+        {
+            yield return new WaitForSeconds(1);
+            timeBeforeWave -= 1;
+            wavetimer.text = "" + timeBeforeWave;
+        }
+
+        if (timeBeforeWave == 0)
+        {
+            
+            wavetimer.text = "";
+            
+        }
+    }
+
 
 }
