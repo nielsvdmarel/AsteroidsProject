@@ -28,8 +28,9 @@ public class healthScript : MonoBehaviour {
         {
             if (currentHealth < minHealth)
             {
-                enemies.GetComponent<waveScript>().enemmiesDiedPlus();
                 Destroy(gameObject);
+                enemies.GetComponent<waveScript>().enemmiesDiedPlus();
+                
             }
         }
         else if (boss)

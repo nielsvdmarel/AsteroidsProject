@@ -33,7 +33,7 @@ public class CamerFollow : MonoBehaviour {
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            if (zoomSize < 20)
+            if (zoomSize < 35)
                 zoomSize += 1;
 
         }

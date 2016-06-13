@@ -9,14 +9,16 @@ public class ChangeScene : MonoBehaviour {
         SceneManager.LoadScene("NielsTestScene");
     }
 
-    public void Instructions()
-    {
-        SceneManager.LoadScene("Instructions");
-    }
+    
 
     public void MainMenu()
     {
         SceneManager.LoadScene("main menu");
+    }
+
+    public void movetut()
+    {
+        SceneManager.LoadScene("movetut");
     }
 
 }

@@ -2,16 +2,18 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class CollisionSceneChange : MonoBehaviour
-{
+public class Collisionentertopickup : MonoBehaviour
+
+
+	{
 
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        
-            SceneManager.LoadScene("shoottut");
 
-        
+        SceneManager.LoadScene("pickups");
+
+
     }
 
 
