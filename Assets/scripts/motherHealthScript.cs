@@ -19,6 +19,10 @@ public class motherHealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
 
         if (currentHealth < minHealth)
         {

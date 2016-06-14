@@ -10,11 +10,10 @@ public class speedpowerup : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-
-            speedup(Speeed);
+            other.GetComponent<pickupUseScript>().makeSpeedTrue();
+            other.GetComponent<pickupUseScript>().setSpeed(Speeed);
             Destroy(gameObject);
-            GameObject.Find("TextTimer").GetComponent<MyTimer>().resetTimer();
-            GameObject.Find("TextTimer").GetComponent<MyTimer>().StartTimer();  
+             
 
         }
 
