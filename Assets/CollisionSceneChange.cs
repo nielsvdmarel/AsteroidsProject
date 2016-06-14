@@ -6,13 +6,18 @@ public class CollisionSceneChange : MonoBehaviour
 {
 
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void onCollisionEnter2D(Collision2D coll)
     {
         
-            SceneManager.LoadScene("shoottut");
+            
+
+        
+        Application.LoadLevel(Application.loadedLevel + 1);
 
         
     }
+
+    
 
 
 }

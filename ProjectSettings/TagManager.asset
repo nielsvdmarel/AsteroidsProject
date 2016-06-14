@@ -10,6 +10,7 @@ TagManager:
   - enemy
   - laser
   - border
+  - GM
   layers:
   - Default
   - TransparentFX
