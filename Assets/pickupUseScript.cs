@@ -7,6 +7,7 @@ public class pickupUseScript : MonoBehaviour {
     private bool speed;
     private bool LaserSelected;
     private float speednum;
+    private bool haveAPickup;
 
 
     void Start () {
@@ -39,15 +40,8 @@ public class pickupUseScript : MonoBehaviour {
         if (Input.GetAxis("Mouse ScrollWheel") > 0 || Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             LaserSelected = !LaserSelected;
-            if(laser && !speed)
-            {
-                LaserSelected = true;
-            }
-            else if(!laser && speed)
-            {
-                LaserSelected = false;
-            }
         }
+        booleanChecks();
 
 
     }
@@ -56,7 +50,6 @@ public class pickupUseScript : MonoBehaviour {
     {
         laser = true;
     }
-
     public void makeSpeedTrue()
     {
         speed = true;
@@ -65,8 +58,43 @@ public class pickupUseScript : MonoBehaviour {
     {
         speednum = Speeed;
     }
+    public bool getSpeed()
+    {
+        return speed;
+    }
+    public bool getLaser()
+    {
+        return laser;
+    }
+    public bool getSelected()
+    {
+        return LaserSelected;
+    }
+    public bool gethave()
+    {
+        return haveAPickup;
+    }
     private void speedup(float speedchange)
     {
         GameObject.Find("Player").GetComponent<PlayerMovementAst>().ThrustForce += speedchange;
+    }
+    private void booleanChecks()
+    {
+        if (laser && !speed)
+        {
+            LaserSelected = true;
+        }
+        else if (!laser && speed)
+        {
+            LaserSelected = false;
+        }
+        if (!speed && !laser)
+        {
+            haveAPickup = false;
+        }
+        else
+        {
+            haveAPickup = true;
+        }
     }
 }
