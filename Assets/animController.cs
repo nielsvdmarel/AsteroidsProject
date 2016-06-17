@@ -9,6 +9,7 @@ public class animController : MonoBehaviour
 
     void Start()
     {
+        
 
         anim = GetComponent<Animator>();
 
@@ -21,14 +22,18 @@ public class animController : MonoBehaviour
     void Update()
     {
 
+       
+
         if (Input.GetKeyDown(KeyCode.H))
         {
+            
             Debug.Log("testbutton");
             anim.SetBool("die", true);
 
         }
         else
         {
+            
             anim.SetBool("die", false);
         }
     }

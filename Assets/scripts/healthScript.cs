@@ -4,6 +4,8 @@ using System.Collections;
 
 public class healthScript : MonoBehaviour {
 
+
+    private Animator anim;
     public float maxHealth;
     public float minHealth;
     public bool boss;
@@ -21,6 +23,7 @@ public class healthScript : MonoBehaviour {
         enemies = GameObject.Find("enemies");
         currentHealth = maxHealth;
         //Destroy(gameObject);
+        anim = GetComponent<Animator>();
     }
 
     void Update () {
@@ -28,6 +31,7 @@ public class healthScript : MonoBehaviour {
         {
             if (currentHealth < minHealth)
             {
+                anim.SetBool("die", true);
                 Destroy(gameObject);
                 enemies.GetComponent<waveScript>().enemmiesDiedPlus();
                 
@@ -55,7 +59,28 @@ public class healthScript : MonoBehaviour {
                 SceneManager.LoadScene("Win");
             }
         }
-	}
+
+
+
+       /* if (Input.GetKeyDown(KeyCode.H))
+        {
+
+            Debug.Log("testbutton");
+            anim.SetBool("die", true);
+
+        }
+        else
+        {
+
+            anim.SetBool("die", false);
+        }
+        */
+
+
+
+
+
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bullet") {
