@@ -4,12 +4,14 @@ using System.Collections;
 public class bulletsShooting : MonoBehaviour {
 
     public GameObject BulletPrefab;
+    public AudioClip[] bulletSounds;
+    private AudioSource audioSourceComponent;
     //private Vector3 pos;
     //private Quaternion rot;
 
     void Start()
     {
-        //rot = transform.rotation;
+        audioSourceComponent = this.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class bulletsShooting : MonoBehaviour {
             if (GameObject.FindGameObjectsWithTag("laser").Length < 1)
             {
                 Instantiate(BulletPrefab, transform.position, transform.rotation);
+                audioSourceComponent.PlayOneShot(bulletSounds[Random.Range(0,3)], 0.7F);
             }
         }
     }
