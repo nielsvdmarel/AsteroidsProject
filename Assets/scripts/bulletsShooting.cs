@@ -18,7 +18,10 @@ public class bulletsShooting : MonoBehaviour {
         
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(BulletPrefab, transform.position, transform.rotation);
+            if (GameObject.FindGameObjectsWithTag("laser").Length < 1)
+            {
+                Instantiate(BulletPrefab, transform.position, transform.rotation);
+            }
         }
     }
 }

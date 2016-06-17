@@ -65,6 +65,7 @@ public class healthScript : MonoBehaviour {
         if (other.tag == "laser")
         {
             Destroy(gameObject);
+            enemies.GetComponent<waveScript>().enemmiesDiedPlus();
         }
     }
     private void targetPlayer()

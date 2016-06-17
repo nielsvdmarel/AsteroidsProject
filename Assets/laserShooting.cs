@@ -51,6 +51,12 @@ public class laserShooting : MonoBehaviour {
             lasertext.text = "";
         }
 
+
+        if(GameObject.FindGameObjectsWithTag("laser").Length < 1)
+        {
+            laserCounter = 1;
+        }
+
     }
 
     public int laserlengtget()
