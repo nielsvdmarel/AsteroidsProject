@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDistance: 100
   pickup: 1
-  randomRange: 50
+  randomRange: 20
 --- !u!212 &21255834
 SpriteRenderer:
   m_ObjectHideFlags: 1

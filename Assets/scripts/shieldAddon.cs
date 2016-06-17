@@ -10,6 +10,7 @@ public class shieldAddon : MonoBehaviour
         {
             Destroy(gameObject);
             GameObject.Find("Player").GetComponent<PlayerRespawnScript>().shield = true;
+            GameObject.Find("shield").GetComponent<shieldScript>().shield = true;
         }
 
     }

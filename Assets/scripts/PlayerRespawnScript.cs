@@ -47,6 +47,7 @@ public class PlayerRespawnScript : MonoBehaviour
             else
             {
                 shield = false;
+                GameObject.Find("shield").GetComponent<shieldScript>().shield = false;
             }
         }
 
