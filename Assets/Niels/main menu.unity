@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7e20ea52634a14ea49db8d410f63db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: 
 --- !u!4 &147584359
 Transform:
   m_ObjectHideFlags: 0
@@ -311,6 +312,7 @@ GameObject:
   - 92: {fileID: 1372316880}
   - 124: {fileID: 1372316879}
   - 81: {fileID: 1372316878}
+  - 114: {fileID: 1372316883}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -385,6 +387,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1372316883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372316877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1ee3479f60d4d41b6ed7566b9df1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: movetut
 --- !u!1 &1390836560
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,18 +540,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1620188275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 147584358}
-        m_MethodName: movetut
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1620188275

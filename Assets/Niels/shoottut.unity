@@ -667,6 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8285eb277d0b48943b17f22e2cf42bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: pickups
 --- !u!50 &120679671
 Rigidbody2D:
   serializedVersion: 2
@@ -2512,6 +2513,7 @@ GameObject:
   - 124: {fileID: 196464487}
   - 81: {fileID: 196464486}
   - 114: {fileID: 196464485}
+  - 114: {fileID: 196464491}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -2600,6 +2602,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &196464491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 196464484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1ee3479f60d4d41b6ed7566b9df1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: shoottut
 --- !u!1 &198595196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3137,6 +3151,10 @@ Prefab:
     - target: {fileID: 443320, guid: f6a666f555f136245937ab350102ce6c, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401190, guid: f6a666f555f136245937ab350102ce6c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6a666f555f136245937ab350102ce6c, type: 2}
@@ -4563,6 +4581,72 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &931378707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 931378709}
+  - 114: {fileID: 931378708}
+  m_Layer: 0
+  m_Name: enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &931378708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931378707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawndistance: 150
+  waveStartDelay: 4
+  enemySpawnDelay:
+  - 2
+  - 2
+  waves: 3
+  pickups: []
+  speed:
+  - 2
+  - 1
+  shield:
+  - 3
+  - 1
+  health:
+  - 1
+  - 1
+  laser:
+  - 4
+  - 1
+  Enemies: []
+  hunterObject: {fileID: 170728, guid: 82cf84eaf642f724bbc5b533ecf9b502, type: 2}
+  boss: {fileID: 139534, guid: 5fd30857098c9ac4e88d10c03b3fa803, type: 2}
+  enemy1: 010000000200000001000000
+  enemy2: 010000000100000001000000
+  enemy3: 010000000100000001000000
+  hunter: 010000000100000001000000
+  playercanmove: 1
+--- !u!4 &931378709
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931378707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1 &935161576
 GameObject:
   m_ObjectHideFlags: 0
@@ -5780,7 +5864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationSpeed: 175
   ThrustForce: 10
-  defaultspeed: 0
+  defaultspeed: 100
   breakforce: 1.1
 --- !u!114 &1078645877
 MonoBehaviour:
@@ -5806,6 +5890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {x: 0, y: 0}
+  shield: 0
 --- !u!114 &1078645879
 MonoBehaviour:
   m_ObjectHideFlags: 0

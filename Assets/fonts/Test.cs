@@ -3,13 +3,18 @@ using System.Collections;
 
 public class Test : MonoBehaviour {
 
-	// Use this for initialization
+    public string scene;
+
+	
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
-	void Update () {
 	
+	void OnGUI () {
+	    if (GUI.Button(new Rect(-100, 0, 0,0),""))
+        {
+            Initiate.Fade(scene, Color.black, 0.5f);
+        }
 	}
 }

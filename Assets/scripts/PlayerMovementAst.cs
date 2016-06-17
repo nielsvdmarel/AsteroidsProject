@@ -6,6 +6,7 @@ public class PlayerMovementAst : MonoBehaviour {
     public float RotationSpeed;
     public float ThrustForce;
     public float defaultspeed;
+    
 
     public float breakforce;
     
@@ -66,6 +67,8 @@ public class PlayerMovementAst : MonoBehaviour {
 
 
             }
+
+            
 
         }
 

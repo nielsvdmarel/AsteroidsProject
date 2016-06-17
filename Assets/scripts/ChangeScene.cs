@@ -4,21 +4,13 @@ using System.Collections;
 
 public class ChangeScene : MonoBehaviour {
 
+    public string scene;
+
     public void NielsTestScene()
     {
-        SceneManager.LoadScene("NielsTestScene");
+       
+        Initiate.Fade(scene, Color.black, 0.5f);
     }
 
     
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("main menu");
-    }
-
-    public void movetut()
-    {
-        SceneManager.LoadScene("movetut");
-    }
-
 }

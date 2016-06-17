@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11438702}
   - 114: {fileID: 11401190}
   - 60: {fileID: 6088802}
+  - 114: {fileID: 11476188}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: enemy
@@ -317,6 +318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDistance: 0
+  pickup: 0
+  randomRange: 0
 --- !u!114 &11417036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,6 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotSpeed: 90
   hunter: 0
+  extraTurn: 0
   target: {fileID: 0}
 --- !u!114 &11438702
 MonoBehaviour:
@@ -361,6 +365,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Motherdamage: 5
+--- !u!114 &11476188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cf8bfa804dbed4099ea899c7326bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Motherdamage: 3
 --- !u!114 &11493914
 MonoBehaviour:
   m_ObjectHideFlags: 1
