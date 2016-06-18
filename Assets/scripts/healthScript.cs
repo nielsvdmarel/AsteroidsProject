@@ -56,7 +56,9 @@ public class healthScript : MonoBehaviour {
             if (currentHealth < minHealth)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene("Win");
+                //SceneManager.LoadScene("Win");
+                GameObject.Find("Audio Source").GetComponent<backgroudSound>().clip = 2;
+                GameObject.Find("Audio Source").GetComponent<backgroudSound>().win = true;
             }
         }
 

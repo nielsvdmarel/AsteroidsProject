@@ -30,8 +30,9 @@ public class motherHealthScript : MonoBehaviour
 
 
 
-            SceneManager.LoadScene("gameover");
-
+            // SceneManager.LoadScene("gameover");
+            GameObject.Find("Audio Source").GetComponent<backgroudSound>().clip = 2;
+            GameObject.Find("Audio Source").GetComponent<backgroudSound>().win = false;
 
         }
     }

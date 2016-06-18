@@ -71,7 +71,9 @@ public class waveScript : MonoBehaviour
                 {
                     enemyCounter = -1;
                     Instantiate(boss);
-                    
+                    GameObject.Find("Audio Source").GetComponent<backgroudSound>().clip = 3;
+                    //GameObject.Find("Audio Source").GetComponent<backgroudSound>().mid();
+
                 } else {
                     GameObject[] allPickUps = GameObject.FindGameObjectsWithTag("pickup laserbeam");
                     for(int i = 0; i < allPickUps.Length; i++)

@@ -3735,7 +3735,7 @@ MonoBehaviour:
   enemySpawnDelay:
   - 2
   - 2
-  waves: 3
+  waves: 1
   pickups:
   - {fileID: 116156, guid: 454d6db3206d7264aabdc0b6d3b8b241, type: 2}
   - {fileID: 196326, guid: 5cb7caefa71818049aa6a12e99d45f7b, type: 2}
@@ -3759,10 +3759,10 @@ MonoBehaviour:
   - {fileID: 101888, guid: 58851e42734f2e540855609c81b18aa7, type: 2}
   hunterObject: {fileID: 170728, guid: 82cf84eaf642f724bbc5b533ecf9b502, type: 2}
   boss: {fileID: 139534, guid: 5fd30857098c9ac4e88d10c03b3fa803, type: 2}
-  enemy1: 190000000200000001000000
-  enemy2: 140000000100000001000000
-  enemy3: 0a0000000100000001000000
-  hunter: 040000000100000001000000
+  enemy1: 01000000
+  enemy2: 00000000
+  enemy3: 00000000
+  hunter: 00000000
   playercanmove: 0
 --- !u!4 &470456166
 Transform:
@@ -8324,7 +8324,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3119880c5d376c3459081e31a6378a20, type: 3}
   - {fileID: 8300000, guid: afbc576260d7c6d45889d167e8b18a16, type: 3}
   - {fileID: 8300000, guid: e8572c828435cbc459ec4c614d09a78d, type: 3}
+  - {fileID: 8300000, guid: 2716195348ca1bd4397b83c1d562352d, type: 3}
+  bossSound: {fileID: 8300000, guid: 2716195348ca1bd4397b83c1d562352d, type: 3}
+  boss: 0
   LastSound: 0
+  clip: 0
+  win: 0
 --- !u!82 &876584809
 AudioSource:
   m_ObjectHideFlags: 0
