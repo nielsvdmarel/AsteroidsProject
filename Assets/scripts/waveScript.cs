@@ -7,6 +7,8 @@ public class waveScript : MonoBehaviour
 {
 
     public int enemiesDied;
+    public int wave;
+    public int total;
 
     public int maxEnemies;
     public float spawndistance;
@@ -36,10 +38,9 @@ public class waveScript : MonoBehaviour
     public bool playercanmove = false;
 
     
-    private int wave;
+    
     private SpriteRenderer backColorRenderer;
     private float enemyCounter;
-    private int total;
     private float timeBeforeWave;
     private Text wavetimer;
 
@@ -87,13 +88,14 @@ public class waveScript : MonoBehaviour
                     total = enemy1[wave] + enemy2[wave] + enemy3[wave];
                     InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
                     pickUps();
+                    print("test");
                     enemyCounter = 0;
                     enemiesDied = 0;
                 }
 
             }
         }
-    }
+        }
     private void spawn()
     {
         if (GameObject.FindGameObjectsWithTag("enemy").Length < maxEnemies+1)
