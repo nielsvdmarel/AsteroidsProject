@@ -4,7 +4,7 @@ using System.Collections;
 
 public class healthScript : MonoBehaviour {
 
-
+    private bool first;
     private Animator anim;
     public float maxHealth;
     public float minHealth;
@@ -22,6 +22,7 @@ public class healthScript : MonoBehaviour {
 
 	
 	void Start () {
+        first = true;
         enemies = GameObject.Find("enemies");
         currentHealth = maxHealth;
         //Destroy(gameObject);
@@ -41,8 +42,11 @@ public class healthScript : MonoBehaviour {
                 
                 Object.Destroy(gameObject, .6f);
                 //anim.SetBool("die", false);
-                enemies.GetComponent<waveScript>().enemmiesDiedPlus();
-                
+                if (first)
+                {
+                    enemies.GetComponent<waveScript>().enemmiesDiedPlus();
+                    first = false;
+                }
             }
         }
 
@@ -112,8 +116,11 @@ public class healthScript : MonoBehaviour {
         {
             anim.SetBool("die", true);
             Object.Destroy(gameObject, 0.5f);
-            //anim.SetBool("die", false);
-            enemies.GetComponent<waveScript>().enemmiesDiedPlus();
+            if (first)
+            {
+                enemies.GetComponent<waveScript>().enemmiesDiedPlus();
+                first = false;
+            }
         }
     }
     private void targetPlayer()

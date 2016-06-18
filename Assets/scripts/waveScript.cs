@@ -6,6 +6,8 @@ using System.Collections;
 public class waveScript : MonoBehaviour
 {
 
+    public int enemiesDied;
+
     public int maxEnemies;
     public float spawndistance;
     public float waveStartDelay;
@@ -33,7 +35,7 @@ public class waveScript : MonoBehaviour
 
     public bool playercanmove = false;
 
-    private int enemiesDied;
+    
     private int wave;
     private SpriteRenderer backColorRenderer;
     private float enemyCounter;
