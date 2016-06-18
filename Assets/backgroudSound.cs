@@ -13,9 +13,12 @@ public class backgroudSound : MonoBehaviour {
     public int clip;
     private int oldClip;
     public bool win;
+    public string scene;
+    public string scene2;
 
     // Use this for initialization
     void Start () {
+
         setinvoke = false;
         clip = 0;
         LastSound = false;
@@ -59,11 +62,16 @@ public class backgroudSound : MonoBehaviour {
         {
             if (win)
             {
-                SceneManager.LoadScene("Win");
+                Initiate.Fade(scene, Color.black, 0.5f);
+                //SceneManager.LoadScene("Lose");
+                Debug.Log("win");
+                
             }
             else
             {
-                SceneManager.LoadScene("gameover");
+                Initiate.Fade(scene2, Color.black, 0.5f);
+                //SceneManager.LoadScene("Lose");
+                Debug.Log("Lose");
             }
         }
             StartCoroutine(timerfunction());
