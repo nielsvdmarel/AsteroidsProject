@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public class SpecialEffectsLayer : MonoBehaviour
@@ -12,3 +12,4 @@ public class SpecialEffectsLayer : MonoBehaviour
 
 }
 
+*/

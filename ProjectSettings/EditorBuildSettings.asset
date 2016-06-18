@@ -6,15 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Niels/main menu.unity
+    path: Assets/Niels/NielsTestScene.unity
   - enabled: 1
     path: Assets/Niels/movetut.unity
   - enabled: 1
-    path: Assets/Niels/pickups.unity
-  - enabled: 1
     path: Assets/Niels/shoottut.unity
   - enabled: 1
-    path: Assets/Niels/NielsTestScene.unity
+    path: Assets/Niels/pickups.unity
   - enabled: 1
     path: Assets/Niels/gameover.unity
   - enabled: 1

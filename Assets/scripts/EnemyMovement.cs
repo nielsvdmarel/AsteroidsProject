@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour {
     public float bounceDistance;
     public float spawnDistance;
     public bool drone;
+    private Animator anim;
 
     public GameObject motherboard;
     private float minDistance = 1f;
@@ -23,6 +24,8 @@ public class EnemyMovement : MonoBehaviour {
     
     void Start ()
     {
+
+
         
         if (!drone)
         {
@@ -47,14 +50,24 @@ public class EnemyMovement : MonoBehaviour {
             forward = true;
 
 
+
             if (forward == true)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            
+            
+
+
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+           
             }
             else
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, backSpeed * Time.deltaTime);
-            }
+            
+            transform.position = Vector2.MoveTowards(transform.position, target.position, backSpeed * Time.deltaTime);
+
+            
+        }
+
         
     }
 

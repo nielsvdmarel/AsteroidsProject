@@ -13,11 +13,13 @@ public class healthScript : MonoBehaviour {
     public GameObject drone;
     public float dronehealthloss;
 
+
     private float dronespawnhealth;
     private GameObject[] droneSpawned;
     
 
     public float currentHealth;
+
 	
 	void Start () {
         enemies = GameObject.Find("enemies");
@@ -31,12 +33,19 @@ public class healthScript : MonoBehaviour {
         {
             if (currentHealth < minHealth)
             {
+
+                anim.SetBool("attack", false);
                 anim.SetBool("die", true);
-                Destroy(gameObject);
+                
+                
+                
+                Object.Destroy(gameObject, .6f);
+                //anim.SetBool("die", false);
                 enemies.GetComponent<waveScript>().enemmiesDiedPlus();
                 
             }
         }
+
         else if (boss)
         {
 
@@ -62,6 +71,16 @@ public class healthScript : MonoBehaviour {
             }
         }
 
+
+        if (gameObject.GetComponent<EnemyMovement>().forward)
+        {
+            anim.SetBool("attack", true);
+        }
+
+        else
+        {
+            anim.SetBool("attack", false);
+        }
 
 
        /* if (Input.GetKeyDown(KeyCode.H))
@@ -91,7 +110,9 @@ public class healthScript : MonoBehaviour {
         }
         if (other.tag == "laser")
         {
-            Destroy(gameObject);
+            anim.SetBool("die", true);
+            Object.Destroy(gameObject, 0.5f);
+            //anim.SetBool("die", false);
             enemies.GetComponent<waveScript>().enemmiesDiedPlus();
         }
     }
