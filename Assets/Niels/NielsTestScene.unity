@@ -7325,7 +7325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 863930688}
   Camera_follow_speed: 1
-  zoomSize: 20
+  zoomSize: 35
 --- !u!114 &1325354311
 MonoBehaviour:
   m_ObjectHideFlags: 0
