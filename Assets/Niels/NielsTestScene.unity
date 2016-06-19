@@ -3053,6 +3053,8 @@ MonoBehaviour:
   headLaser: {fileID: 115154, guid: 19540429c9a9e484badf5859cc6b2d0d, type: 2}
   laserTime: 10
   laserTimeLeft: 0
+  lasersound: 0
+  lasersoundClip: {fileID: 0}
 --- !u!1 &475762742
 GameObject:
   m_ObjectHideFlags: 0
