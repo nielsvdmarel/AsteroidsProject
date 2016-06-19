@@ -5,13 +5,13 @@ using System.Collections;
 public class CHealthTest : MonoBehaviour {
 
     public Scrollbar HealthBar;
-    public float Health = 500;
+    public float Health = 5000;
 
     public void Damage(float value)
     {
 
         Health -= value;
-        HealthBar.size = Health / 500f;
+        HealthBar.size = Health / 5000f;
     }
 
     void Update()

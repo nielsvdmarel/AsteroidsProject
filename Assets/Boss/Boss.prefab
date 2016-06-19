@@ -1011,9 +1011,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a45a6cb3a321449bf7b3ff97a3f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   backSpeed: 1
-  bounceDistance: 5
+  bounceDistance: 7
   spawnDistance: 0
   drone: 0
   motherboard: {fileID: 0}
