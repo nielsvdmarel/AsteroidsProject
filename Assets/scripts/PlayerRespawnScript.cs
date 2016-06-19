@@ -10,9 +10,12 @@ public class PlayerRespawnScript : MonoBehaviour
 
     public bool shield;
 
+    public AudioClip playerDieClip;
+
+    private AudioSource audioSourceComponent;
     void Start()
     {
-
+        audioSourceComponent = this.GetComponent<AudioSource>();
 
 
 
@@ -38,6 +41,7 @@ public class PlayerRespawnScript : MonoBehaviour
             if (!shield) {
                 if (spawn.x == GameObject.Find("MoederBoord").transform.position.x && spawn.y == GameObject.Find("MoederBoord").transform.position.y)
                 {
+                    audioSourceComponent.PlayOneShot(playerDieClip, 1F);
                     this.GetComponent<Collider2D>().isTrigger = true;
                 }
                 playerRigidbody.velocity = Vector2.zero;

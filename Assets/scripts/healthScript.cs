@@ -12,6 +12,8 @@ public class healthScript : MonoBehaviour {
     public GameObject enemies;
     public GameObject drone;
     public float dronehealthloss;
+    private AudioSource audioSourceComponent;
+    public AudioClip EnemyHitClip;
 
 
     private float dronespawnhealth;
@@ -22,6 +24,8 @@ public class healthScript : MonoBehaviour {
 
 	
 	void Start () {
+        EnemyHitClip = GameObject.Find("audio Source").GetComponent<audioHolder>().hit;
+        audioSourceComponent = this.GetComponent<AudioSource>();
         first = true;
         enemies = GameObject.Find("enemies");
         currentHealth = maxHealth;
@@ -109,6 +113,7 @@ public class healthScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bullet") {
+            audioSourceComponent.PlayOneShot(EnemyHitClip, 0.7F);
             Destroy(other.gameObject);
             currentHealth -= other.GetComponent<bulletCollision>().damage;
         }

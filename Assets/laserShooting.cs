@@ -7,30 +7,33 @@ public class laserShooting : MonoBehaviour {
     public GameObject headLaser;
     public int laserTime;
     public int laserTimeLeft;
+    public bool lasersound;
+    public AudioClip lasersoundClip;
 
     private Text lasertext;
     private GameObject[] lasers;
     private int laserCounter;
     private bool deleteLaser = false;
     private bool createLaser = false;
+    private AudioSource audioSourceComponent;
 
     // Use this for initialization
     void Start() {
-        
+        audioSourceComponent = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update() {
 
-        if (Input.GetKeyDown(KeyCode.V))
+       /* if (Input.GetKeyDown(KeyCode.V))
         {
             if (createLaser){createLaser = false; }
             else{createLaser = true;}
-        }
-        if (Input.GetKeyDown(KeyCode.B))
+        }*/
+        /*if (Input.GetKeyDown(KeyCode.B))
         {
             deleteLaser = true;
-        } 
+        } */
         if (createLaser)
         {
             instantiateLaser();
@@ -55,6 +58,20 @@ public class laserShooting : MonoBehaviour {
         if(GameObject.FindGameObjectsWithTag("laser").Length < 1)
         {
             laserCounter = 1;
+            if (!lasersound)
+            {
+                audioSourceComponent.Stop();
+                lasersound = true;
+                CancelInvoke();
+            }
+        }
+
+        if(GameObject.FindGameObjectsWithTag("laser").Length > 1 &&  lasersound)
+        {
+            
+            InvokeRepeating("lasershounds", 0, lasersoundClip.length-1f);
+            lasersound = false;
+
         }
 
     }
@@ -96,6 +113,11 @@ public class laserShooting : MonoBehaviour {
             createLaser = false;
 
         }
+    }
+
+    private void lasershounds()
+    {
+        audioSourceComponent.PlayOneShot(lasersoundClip, 1F);
     }
 
 }
