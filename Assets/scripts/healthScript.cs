@@ -113,9 +113,10 @@ public class healthScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bullet") {
-            audioSourceComponent.PlayOneShot(EnemyHitClip, 0.7F);
+            
             Destroy(other.gameObject);
             currentHealth -= other.GetComponent<bulletCollision>().damage;
+            audioSourceComponent.PlayOneShot(EnemyHitClip, 0.7F);
         }
         if (other.tag == "laser")
         {
