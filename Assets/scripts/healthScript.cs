@@ -24,7 +24,7 @@ public class healthScript : MonoBehaviour {
 
 	
 	void Start () {
-        //EnemyHitClip = GameObject.Find("audio Source").GetComponent<audioHolder>().hit;
+        EnemyHitClip = GameObject.Find("Audio Source").GetComponent<audioHolder>().hit;
         audioSourceComponent = this.GetComponent<AudioSource>();
         first = true;
         enemies = GameObject.Find("enemies");
@@ -116,7 +116,7 @@ public class healthScript : MonoBehaviour {
             
             Destroy(other.gameObject);
             currentHealth -= other.GetComponent<bulletCollision>().damage;
-            //audioSourceComponent.PlayOneShot(EnemyHitClip, 0.7F);
+            audioSourceComponent.PlayOneShot(EnemyHitClip, 0.7F);
         }
         if (other.tag == "laser")
         {

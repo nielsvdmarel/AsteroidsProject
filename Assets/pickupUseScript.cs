@@ -43,6 +43,10 @@ public class pickupUseScript : MonoBehaviour {
         }
         booleanChecks();
 
+        if(GameObject.Find("Boss") != null)
+        {
+            laser = false;
+        }
 
     }
 
