@@ -48,14 +48,16 @@ public class waveScript : MonoBehaviour
 
     void Start()
     {
+        total = enemy1[wave] + enemy2[wave] + enemy3[wave] + hunter[wave];
         wavetimer = GameObject.Find("waveTimer").GetComponent<Text>();
         timeBeforeWave = waveStartDelay;
 
         InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
-        total = enemy1[wave] + enemy2[wave] + enemy3[wave] + hunter[wave];
+        //total = enemy1[wave] + enemy2[wave] + enemy3[wave] + hunter[wave];
         enemyCounter = 0;
         wave = 0;
         StartCoroutine(timerfunction());
+
     }
 
 
@@ -85,7 +87,7 @@ public class waveScript : MonoBehaviour
                     }
                     timeBeforeWave = waveStartDelay;
                     StartCoroutine(timerfunction());
-                    total = enemy1[wave] + enemy2[wave] + enemy3[wave];
+                    total = enemy1[wave] + enemy2[wave] + enemy3[wave] + hunter[wave];
                     InvokeRepeating("spawn", waveStartDelay, Random.Range(enemySpawnDelay[0], enemySpawnDelay[1]));
                     pickUps();
                     print("test");

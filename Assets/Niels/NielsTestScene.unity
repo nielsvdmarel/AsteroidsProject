@@ -10854,8 +10854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesDied: 0
-  wave: 1
-  total: 120
+  wave: 0
+  total: 0
   maxEnemies: 50
   spawndistance: 150
   waveStartDelay: 4
