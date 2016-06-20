@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Niels/main menu.unity
   - enabled: 1
-    path: Assets/Niels/NielsTestScene.unity
-  - enabled: 1
     path: Assets/Niels/movetut.unity
   - enabled: 1
     path: Assets/Niels/shoottut.unity
   - enabled: 1
     path: Assets/Niels/pickups.unity
+  - enabled: 1
+    path: Assets/Niels/NielsTestScene.unity
   - enabled: 1
     path: Assets/Niels/gameover.unity
   - enabled: 1

@@ -10822,7 +10822,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1966985336}
-  - 114: {fileID: 1966985335}
   - 114: {fileID: 1966985337}
   m_Layer: 0
   m_Name: enemies
@@ -10831,87 +10830,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1966985335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1966985334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18323648c05bbee46ab749b5b50ab92d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesDied: 0
-  wave: 0
-  total: 0
-  maxEnemies: 50
-  spawndistance: 150
-  waveStartDelay: 4
-  enemySpawnDelay:
-  - 0.3
-  - 0.3
-  waves: 10
-  pickups:
-  - {fileID: 116156, guid: 454d6db3206d7264aabdc0b6d3b8b241, type: 2}
-  - {fileID: 196326, guid: 5cb7caefa71818049aa6a12e99d45f7b, type: 2}
-  - {fileID: 100770, guid: f1e4d61ef355eed46b0fd6de8664041c, type: 2}
-  - {fileID: 152954, guid: 5279fabe2974c104a8063ef6e1596019, type: 2}
-  speed:
-  - 2
-  - 1
-  - 2
-  - 1
-  - 2
-  - 1
-  - 2
-  - 2
-  - 1
-  - 2
-  shield:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  health:
-  - 2
-  - 1
-  - 3
-  - 1
-  - 3
-  - 1
-  - 3
-  - 1
-  - 3
-  - 1
-  laser:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  Enemies:
-  - {fileID: 119822, guid: cfb6bf90fa0a7e54cb60096349cfa733, type: 2}
-  - {fileID: 150326, guid: 5bff8e67fe49446469cd71bd06ead2f3, type: 2}
-  - {fileID: 101888, guid: 58851e42734f2e540855609c81b18aa7, type: 2}
-  hunterObject: {fileID: 130444, guid: 89ebb463004201a42b3532ddbd919a0b, type: 2}
-  boss: {fileID: 106198, guid: e587dbb9063e90f4f9c8aac9d94f0402, type: 2}
-  enemy1: 00000000280000002800000028000000280000002800000028000000280000002800000028000000
-  enemy2: 00000000280000002800000028000000280000002800000028000000280000002800000028000000
-  enemy3: 00000000280000002800000028000000280000002800000028000000280000002800000028000000
-  hunter: 02000000010000000100000001000000010000000100000001000000010000000100000001000000
-  playercanmove: 0
 --- !u!4 &1966985336
 Transform:
   m_ObjectHideFlags: 0
@@ -10951,8 +10869,8 @@ MonoBehaviour:
   - {fileID: 100770, guid: f1e4d61ef355eed46b0fd6de8664041c, type: 2}
   - {fileID: 152954, guid: 5279fabe2974c104a8063ef6e1596019, type: 2}
   speed:
-  - 0
-  - 0
+  - 1
+  - 1
   - 2
   - 1
   - 2
@@ -10962,8 +10880,8 @@ MonoBehaviour:
   - 1
   - 2
   shield:
-  - 0
-  - 0
+  - 1
+  - 1
   - 1
   - 1
   - 1
@@ -10973,8 +10891,8 @@ MonoBehaviour:
   - 1
   - 1
   health:
-  - 0
-  - 0
+  - 1
+  - 1
   - 3
   - 1
   - 3
@@ -10984,8 +10902,8 @@ MonoBehaviour:
   - 3
   - 1
   laser:
-  - 0
-  - 0
+  - 1
+  - 1
   - 1
   - 1
   - 1
