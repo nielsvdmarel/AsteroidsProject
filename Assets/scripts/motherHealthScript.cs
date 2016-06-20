@@ -41,11 +41,11 @@ public class motherHealthScript : MonoBehaviour
 
         if (other.tag == "enemy")
         {
-
+            currentHealth -= other.GetComponent<motherDamageScript>().Motherdamage;
             //other.GetComponent<EnemyMovement>.forward = false;
             other.GetComponentInParent<EnemyMovement>().forward = false;
             other.GetComponentInParent<EnemyMovement>().setrange();
-            currentHealth -= other.GetComponent<motherDamageScript>().Motherdamage;
+            
             if (other.GetComponentInParent<EnemyMovement>().drone)
             {
                 Destroy(other.gameObject);

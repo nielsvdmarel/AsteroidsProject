@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cf8bfa804dbed4099ea899c7326bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Motherdamage: 5
+  Motherdamage: 100
 --- !u!114 &11461298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -801,6 +801,8 @@ MonoBehaviour:
   enemies: {fileID: 0}
   drone: {fileID: 0}
   dronehealthloss: 0
+  EnemyHitClip: {fileID: 0}
+  scene3: 
   currentHealth: 0
 --- !u!114 &11478282
 MonoBehaviour:

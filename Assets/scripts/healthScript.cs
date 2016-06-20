@@ -14,7 +14,7 @@ public class healthScript : MonoBehaviour {
     public float dronehealthloss;
     private AudioSource audioSourceComponent;
     public AudioClip EnemyHitClip;
-
+    public string scene3;
 
     private float dronespawnhealth;
     private GameObject[] droneSpawned;
@@ -72,10 +72,14 @@ public class healthScript : MonoBehaviour {
             }
             if (currentHealth < minHealth)
             {
+
+
                 Destroy(gameObject);
+                Initiate.Fade(scene3, Color.black, 0.5f);
                 //SceneManager.LoadScene("Win");
                 GameObject.Find("Audio Source").GetComponent<backgroudSound>().clip = 2;
                 GameObject.Find("Audio Source").GetComponent<backgroudSound>().win = true;
+
             }
         }
 

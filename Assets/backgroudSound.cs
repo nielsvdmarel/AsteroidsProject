@@ -15,6 +15,7 @@ public class backgroudSound : MonoBehaviour {
     public bool win;
     public string scene;
     public string scene2;
+    
 
     // Use this for initialization
     void Start () {
