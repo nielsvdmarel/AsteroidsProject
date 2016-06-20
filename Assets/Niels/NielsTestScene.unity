@@ -10862,7 +10862,7 @@ MonoBehaviour:
   enemySpawnDelay:
   - 0.3
   - 0.3
-  waves: 10
+  waves: 1
   pickups:
   - {fileID: 116156, guid: 454d6db3206d7264aabdc0b6d3b8b241, type: 2}
   - {fileID: 196326, guid: 5cb7caefa71818049aa6a12e99d45f7b, type: 2}
@@ -10870,47 +10870,11 @@ MonoBehaviour:
   - {fileID: 152954, guid: 5279fabe2974c104a8063ef6e1596019, type: 2}
   speed:
   - 1
-  - 1
-  - 2
-  - 1
-  - 2
-  - 1
-  - 2
-  - 2
-  - 1
-  - 2
   shield:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
   - 1
   health:
   - 1
-  - 1
-  - 3
-  - 1
-  - 3
-  - 1
-  - 3
-  - 1
-  - 3
-  - 1
   laser:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
   - 1
   Enemies:
   - {fileID: 119822, guid: cfb6bf90fa0a7e54cb60096349cfa733, type: 2}
@@ -10918,10 +10882,10 @@ MonoBehaviour:
   - {fileID: 101888, guid: 58851e42734f2e540855609c81b18aa7, type: 2}
   hunterObject: {fileID: 130444, guid: 89ebb463004201a42b3532ddbd919a0b, type: 2}
   boss: {fileID: 106198, guid: e587dbb9063e90f4f9c8aac9d94f0402, type: 2}
-  enemy1: 0a0000000c0000000e00000010000000120000001400000016000000180000001a0000001e000000
-  enemy2: 0a0000000c0000000e00000010000000120000001400000016000000180000001a0000001e000000
-  enemy3: 0a0000000c0000000e00000010000000120000001400000016000000180000001a0000001e000000
-  hunter: 00000000010000000000000002000000000000000100000000000000010000000000000003000000
+  enemy1: 03000000
+  enemy2: 03000000
+  enemy3: 03000000
+  hunter: 01000000
   playercanmove: 0
 --- !u!1 &1996412876
 GameObject:
