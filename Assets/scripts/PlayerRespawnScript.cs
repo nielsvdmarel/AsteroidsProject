@@ -41,8 +41,9 @@ public class PlayerRespawnScript : MonoBehaviour
             if (!shield) {
                 if (spawn.x == GameObject.Find("MoederBoord").transform.position.x && spawn.y == GameObject.Find("MoederBoord").transform.position.y)
                 {
-                    audioSourceComponent.PlayOneShot(playerDieClip, 1F);
                     this.GetComponent<Collider2D>().isTrigger = true;
+                    audioSourceComponent.PlayOneShot(playerDieClip, 1F);
+                    
                 }
                 playerRigidbody.velocity = Vector2.zero;
                 //print("collision found");
