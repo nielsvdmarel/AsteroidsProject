@@ -10170,7 +10170,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: afbc576260d7c6d45889d167e8b18a16, type: 3}
   - {fileID: 8300000, guid: e8572c828435cbc459ec4c614d09a78d, type: 3}
   - {fileID: 8300000, guid: 2716195348ca1bd4397b83c1d562352d, type: 3}
-  bossSound: {fileID: 8300000, guid: 2716195348ca1bd4397b83c1d562352d, type: 3}
+  bossSound: {fileID: 8300000, guid: 5dea47ff65eadec4aab4828acc5c53b0, type: 3}
   boss: 0
   LastSound: 0
   clip: 0
